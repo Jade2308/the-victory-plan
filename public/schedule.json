@@ -1,0 +1,3652 @@
+[
+  {
+    "dayIndex": 1,
+    "month": 1,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 1",
+      "newTestament": "Ma-thi-ơ 1",
+      "oldTestament": "Sáng thế ký 1-2"
+    }
+  },
+  {
+    "dayIndex": 2,
+    "month": 1,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 2",
+      "newTestament": "Ma-thi-ơ 2",
+      "oldTestament": "Sáng thế ký 3-4"
+    }
+  },
+  {
+    "dayIndex": 3,
+    "month": 1,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 3",
+      "newTestament": "Ma-thi-ơ 3",
+      "oldTestament": "Sáng thế ký 5-6"
+    }
+  },
+  {
+    "dayIndex": 4,
+    "month": 1,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 4",
+      "newTestament": "Ma-thi-ơ 4",
+      "oldTestament": "Sáng thế ký 7-8"
+    }
+  },
+  {
+    "dayIndex": 5,
+    "month": 1,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 5",
+      "newTestament": "Ma-thi-ơ 5",
+      "oldTestament": "Sáng thế ký 9-10"
+    }
+  },
+  {
+    "dayIndex": 6,
+    "month": 1,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 6",
+      "newTestament": "Ma-thi-ơ 6",
+      "oldTestament": "Sáng thế ký 11-12"
+    }
+  },
+  {
+    "dayIndex": 7,
+    "month": 1,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 7",
+      "newTestament": "Ma-thi-ơ 7",
+      "oldTestament": "Sáng thế ký 13-14"
+    }
+  },
+  {
+    "dayIndex": 8,
+    "month": 1,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 8",
+      "newTestament": "Ma-thi-ơ 8",
+      "oldTestament": "Sáng thế ký 15-16"
+    }
+  },
+  {
+    "dayIndex": 9,
+    "month": 1,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 9",
+      "newTestament": "Ma-thi-ơ 9",
+      "oldTestament": "Sáng thế ký 17-18"
+    }
+  },
+  {
+    "dayIndex": 10,
+    "month": 1,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 10",
+      "newTestament": "Ma-thi-ơ 10",
+      "oldTestament": "Sáng thế ký 19-20"
+    }
+  },
+  {
+    "dayIndex": 11,
+    "month": 1,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 11",
+      "newTestament": "Ma-thi-ơ 11",
+      "oldTestament": "Sáng thế ký 21-22"
+    }
+  },
+  {
+    "dayIndex": 12,
+    "month": 1,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 12",
+      "newTestament": "Ma-thi-ơ 12",
+      "oldTestament": "Sáng thế ký 23-24"
+    }
+  },
+  {
+    "dayIndex": 13,
+    "month": 1,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 13",
+      "newTestament": "Ma-thi-ơ 13",
+      "oldTestament": "Sáng thế ký 25-26"
+    }
+  },
+  {
+    "dayIndex": 14,
+    "month": 1,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 14",
+      "newTestament": "Ma-thi-ơ 14",
+      "oldTestament": "Sáng thế ký 27-28"
+    }
+  },
+  {
+    "dayIndex": 15,
+    "month": 1,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 15",
+      "newTestament": "Ma-thi-ơ 15",
+      "oldTestament": "Sáng thế ký 29-30"
+    }
+  },
+  {
+    "dayIndex": 16,
+    "month": 1,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 16",
+      "newTestament": "Ma-thi-ơ 16",
+      "oldTestament": "Sáng thế ký 31-32"
+    }
+  },
+  {
+    "dayIndex": 17,
+    "month": 1,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 17",
+      "newTestament": "Ma-thi-ơ 17",
+      "oldTestament": "Sáng thế ký 33-34"
+    }
+  },
+  {
+    "dayIndex": 18,
+    "month": 1,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 18",
+      "newTestament": "Ma-thi-ơ 18",
+      "oldTestament": "Sáng thế ký 35-36"
+    }
+  },
+  {
+    "dayIndex": 19,
+    "month": 1,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 19",
+      "newTestament": "Ma-thi-ơ 19",
+      "oldTestament": "Sáng thế ký 37-38"
+    }
+  },
+  {
+    "dayIndex": 20,
+    "month": 1,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 20",
+      "newTestament": "Ma-thi-ơ 20",
+      "oldTestament": "Sáng thế ký 39-40"
+    }
+  },
+  {
+    "dayIndex": 21,
+    "month": 1,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 21",
+      "newTestament": "Ma-thi-ơ 21",
+      "oldTestament": "Sáng thế ký 41-42"
+    }
+  },
+  {
+    "dayIndex": 22,
+    "month": 1,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 22",
+      "newTestament": "Ma-thi-ơ 22",
+      "oldTestament": "Sáng thế ký 43-44"
+    }
+  },
+  {
+    "dayIndex": 23,
+    "month": 1,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 23",
+      "newTestament": "Ma-thi-ơ 23",
+      "oldTestament": "Sáng thế ký 45-46"
+    }
+  },
+  {
+    "dayIndex": 24,
+    "month": 1,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 24",
+      "newTestament": "Ma-thi-ơ 24",
+      "oldTestament": "Sáng thế ký 47-48"
+    }
+  },
+  {
+    "dayIndex": 25,
+    "month": 1,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 25",
+      "newTestament": "Ma-thi-ơ 25",
+      "oldTestament": "Sáng thế ký 49-50"
+    }
+  },
+  {
+    "dayIndex": 26,
+    "month": 1,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 26",
+      "newTestament": "Ma-thi-ơ 26",
+      "oldTestament": "Xuất Ê-díp-tô ký 1-2"
+    }
+  },
+  {
+    "dayIndex": 27,
+    "month": 1,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 27",
+      "newTestament": "Ma-thi-ơ 27",
+      "oldTestament": "Xuất Ê-díp-tô ký 3-4"
+    }
+  },
+  {
+    "dayIndex": 28,
+    "month": 1,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 28",
+      "newTestament": "Ma-thi-ơ 28",
+      "oldTestament": "Xuất Ê-díp-tô ký 5-6"
+    }
+  },
+  {
+    "dayIndex": 29,
+    "month": 1,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 29",
+      "newTestament": "Công vụ 1",
+      "oldTestament": "Xuất Ê-díp-tô ký 7-8"
+    }
+  },
+  {
+    "dayIndex": 30,
+    "month": 1,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 30",
+      "newTestament": "Công vụ 2",
+      "oldTestament": "Xuất Ê-díp-tô ký 9-10"
+    }
+  },
+  {
+    "dayIndex": 31,
+    "month": 1,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 31",
+      "newTestament": "Công vụ 3",
+      "oldTestament": "Xuất Ê-díp-tô ký 11-12"
+    }
+  },
+  {
+    "dayIndex": 32,
+    "month": 2,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 32",
+      "newTestament": "Công vụ 4",
+      "oldTestament": "Xuất Ê-díp-tô ký 13-14"
+    }
+  },
+  {
+    "dayIndex": 33,
+    "month": 2,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 33",
+      "newTestament": "Công vụ 5",
+      "oldTestament": "Xuất Ê-díp-tô ký 15-16"
+    }
+  },
+  {
+    "dayIndex": 34,
+    "month": 2,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 34",
+      "newTestament": "Công vụ 6",
+      "oldTestament": "Xuất Ê-díp-tô ký 17-18"
+    }
+  },
+  {
+    "dayIndex": 35,
+    "month": 2,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 35",
+      "newTestament": "Công vụ 7",
+      "oldTestament": "Xuất Ê-díp-tô ký 19-20"
+    }
+  },
+  {
+    "dayIndex": 36,
+    "month": 2,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 36",
+      "newTestament": "Công vụ 8",
+      "oldTestament": "Xuất Ê-díp-tô ký 21-22"
+    }
+  },
+  {
+    "dayIndex": 37,
+    "month": 2,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 37",
+      "newTestament": "Công vụ 9",
+      "oldTestament": "Xuất Ê-díp-tô ký 23-24"
+    }
+  },
+  {
+    "dayIndex": 38,
+    "month": 2,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 38",
+      "newTestament": "Công vụ 10",
+      "oldTestament": "Xuất Ê-díp-tô ký 25-26"
+    }
+  },
+  {
+    "dayIndex": 39,
+    "month": 2,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 39",
+      "newTestament": "Công vụ 11",
+      "oldTestament": "Xuất Ê-díp-tô ký 27-28"
+    }
+  },
+  {
+    "dayIndex": 40,
+    "month": 2,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 40",
+      "newTestament": "Công vụ 12",
+      "oldTestament": "Xuất Ê-díp-tô ký 29-30"
+    }
+  },
+  {
+    "dayIndex": 41,
+    "month": 2,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 41",
+      "newTestament": "Công vụ 13",
+      "oldTestament": "Xuất Ê-díp-tô ký 31-32"
+    }
+  },
+  {
+    "dayIndex": 42,
+    "month": 2,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 42",
+      "newTestament": "Công vụ 14",
+      "oldTestament": "Xuất Ê-díp-tô ký 33-34"
+    }
+  },
+  {
+    "dayIndex": 43,
+    "month": 2,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 43",
+      "newTestament": "Công vụ 15",
+      "oldTestament": "Xuất Ê-díp-tô ký 35-36"
+    }
+  },
+  {
+    "dayIndex": 44,
+    "month": 2,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 44",
+      "newTestament": "Công vụ 16",
+      "oldTestament": "Xuất Ê-díp-tô ký 37-38"
+    }
+  },
+  {
+    "dayIndex": 45,
+    "month": 2,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 45",
+      "newTestament": "Công vụ 17",
+      "oldTestament": "Xuất Ê-díp-tô ký 39-40"
+    }
+  },
+  {
+    "dayIndex": 46,
+    "month": 2,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 46",
+      "newTestament": "Công vụ 18",
+      "oldTestament": "Lê-vi 1-3"
+    }
+  },
+  {
+    "dayIndex": 47,
+    "month": 2,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 47",
+      "newTestament": "Công vụ 19",
+      "oldTestament": "Lê-vi 4-5"
+    }
+  },
+  {
+    "dayIndex": 48,
+    "month": 2,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 48",
+      "newTestament": "Công vụ 20",
+      "oldTestament": "Lê-vi 6-7"
+    }
+  },
+  {
+    "dayIndex": 49,
+    "month": 2,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 49",
+      "newTestament": "Công vụ 21",
+      "oldTestament": "Lê-vi 8-9"
+    }
+  },
+  {
+    "dayIndex": 50,
+    "month": 2,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 50",
+      "newTestament": "Công vụ 22",
+      "oldTestament": "Lê-vi 10-11"
+    }
+  },
+  {
+    "dayIndex": 51,
+    "month": 2,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 51",
+      "newTestament": "Công vụ 23",
+      "oldTestament": "Lê-vi 12-13"
+    }
+  },
+  {
+    "dayIndex": 52,
+    "month": 2,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 52",
+      "newTestament": "Công vụ 24",
+      "oldTestament": "Lê-vi 14-15"
+    }
+  },
+  {
+    "dayIndex": 53,
+    "month": 2,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 53",
+      "newTestament": "Công vụ 25",
+      "oldTestament": "Lê-vi 16-17"
+    }
+  },
+  {
+    "dayIndex": 54,
+    "month": 2,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 54",
+      "newTestament": "Công vụ 26",
+      "oldTestament": "Lê-vi 18-19"
+    }
+  },
+  {
+    "dayIndex": 55,
+    "month": 2,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 55",
+      "newTestament": "Công vụ 27",
+      "oldTestament": "Lê-vi 20-21"
+    }
+  },
+  {
+    "dayIndex": 56,
+    "month": 2,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 56",
+      "newTestament": "Công vụ 28",
+      "oldTestament": "Lê-vi 22-23"
+    }
+  },
+  {
+    "dayIndex": 57,
+    "month": 2,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 57",
+      "newTestament": "Mác 1",
+      "oldTestament": "Lê-vi 24-25"
+    }
+  },
+  {
+    "dayIndex": 58,
+    "month": 2,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 58",
+      "newTestament": "Mác 2",
+      "oldTestament": "Lê-vi 26-27"
+    }
+  },
+  {
+    "dayIndex": 59,
+    "month": 2,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 59",
+      "newTestament": "Mác 3",
+      "oldTestament": "Dân số 1-2"
+    }
+  },
+  {
+    "dayIndex": 60,
+    "month": 3,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 60",
+      "newTestament": "Mác 4",
+      "oldTestament": "Dân số 3-4"
+    }
+  },
+  {
+    "dayIndex": 61,
+    "month": 3,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 61",
+      "newTestament": "Mác 5",
+      "oldTestament": "Dân số 5-6"
+    }
+  },
+  {
+    "dayIndex": 62,
+    "month": 3,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 62",
+      "newTestament": "Mác 6",
+      "oldTestament": "Dân số 7-8"
+    }
+  },
+  {
+    "dayIndex": 63,
+    "month": 3,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 63",
+      "newTestament": "Mác 7",
+      "oldTestament": "Dân số 9-10"
+    }
+  },
+  {
+    "dayIndex": 64,
+    "month": 3,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 64",
+      "newTestament": "Mác 8",
+      "oldTestament": "Dân số 11-12"
+    }
+  },
+  {
+    "dayIndex": 65,
+    "month": 3,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 65",
+      "newTestament": "Mác 9",
+      "oldTestament": "Dân số 13-14"
+    }
+  },
+  {
+    "dayIndex": 66,
+    "month": 3,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 66",
+      "newTestament": "Mác 10",
+      "oldTestament": "Dân số 15-16"
+    }
+  },
+  {
+    "dayIndex": 67,
+    "month": 3,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 67",
+      "newTestament": "Mác 11",
+      "oldTestament": "Dân số 17-18"
+    }
+  },
+  {
+    "dayIndex": 68,
+    "month": 3,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 68",
+      "newTestament": "Mác 12",
+      "oldTestament": "Dân số 19-20"
+    }
+  },
+  {
+    "dayIndex": 69,
+    "month": 3,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 69",
+      "newTestament": "Mác 13",
+      "oldTestament": "Dân số 21-22"
+    }
+  },
+  {
+    "dayIndex": 70,
+    "month": 3,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 70",
+      "newTestament": "Mác 14",
+      "oldTestament": "Dân số 23-24"
+    }
+  },
+  {
+    "dayIndex": 71,
+    "month": 3,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 71",
+      "newTestament": "Mác 15",
+      "oldTestament": "Dân số 25-26"
+    }
+  },
+  {
+    "dayIndex": 72,
+    "month": 3,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 72",
+      "newTestament": "Mác 16",
+      "oldTestament": "Dân số 27-28"
+    }
+  },
+  {
+    "dayIndex": 73,
+    "month": 3,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 73",
+      "newTestament": "Rô-ma 1",
+      "oldTestament": "Dân số 29-30"
+    }
+  },
+  {
+    "dayIndex": 74,
+    "month": 3,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 74",
+      "newTestament": "Rô-ma 2",
+      "oldTestament": "Dân số 31-32"
+    }
+  },
+  {
+    "dayIndex": 75,
+    "month": 3,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 75",
+      "newTestament": "Rô-ma 3",
+      "oldTestament": "Dân số 33-34"
+    }
+  },
+  {
+    "dayIndex": 76,
+    "month": 3,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 76",
+      "newTestament": "Rô-ma 4",
+      "oldTestament": "Dân số 35-36"
+    }
+  },
+  {
+    "dayIndex": 77,
+    "month": 3,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 77",
+      "newTestament": "Rô-ma 5",
+      "oldTestament": "Phục truyền 1-2"
+    }
+  },
+  {
+    "dayIndex": 78,
+    "month": 3,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 78",
+      "newTestament": "Rô-ma 6",
+      "oldTestament": "Phục truyền 3-4"
+    }
+  },
+  {
+    "dayIndex": 79,
+    "month": 3,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 79",
+      "newTestament": "Rô-ma 7",
+      "oldTestament": "Phục truyền 5-6"
+    }
+  },
+  {
+    "dayIndex": 80,
+    "month": 3,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 80",
+      "newTestament": "Rô-ma 8",
+      "oldTestament": "Phục truyền 7-8"
+    }
+  },
+  {
+    "dayIndex": 81,
+    "month": 3,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 81",
+      "newTestament": "Rô-ma 9",
+      "oldTestament": "Phục truyền 9-10"
+    }
+  },
+  {
+    "dayIndex": 82,
+    "month": 3,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 82",
+      "newTestament": "Rô-ma 10",
+      "oldTestament": "Phục truyền 11-12"
+    }
+  },
+  {
+    "dayIndex": 83,
+    "month": 3,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 83",
+      "newTestament": "Rô-ma 11",
+      "oldTestament": "Phục truyền 13-14"
+    }
+  },
+  {
+    "dayIndex": 84,
+    "month": 3,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 84",
+      "newTestament": "Rô-ma 12",
+      "oldTestament": "Phục truyền 15-16"
+    }
+  },
+  {
+    "dayIndex": 85,
+    "month": 3,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 85",
+      "newTestament": "Rô-ma 13",
+      "oldTestament": "Phục truyền 17-18"
+    }
+  },
+  {
+    "dayIndex": 86,
+    "month": 3,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 86",
+      "newTestament": "Rô-ma 14",
+      "oldTestament": "Phục truyền 19-20"
+    }
+  },
+  {
+    "dayIndex": 87,
+    "month": 3,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 87",
+      "newTestament": "Rô-ma 15",
+      "oldTestament": "Phục truyền 21-22"
+    }
+  },
+  {
+    "dayIndex": 88,
+    "month": 3,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 88",
+      "newTestament": "Rô-ma 16",
+      "oldTestament": "Phục truyền 23-24"
+    }
+  },
+  {
+    "dayIndex": 89,
+    "month": 3,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 89",
+      "newTestament": "Lu-ca 1",
+      "oldTestament": "Phục truyền 25"
+    }
+  },
+  {
+    "dayIndex": 90,
+    "month": 3,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 90",
+      "newTestament": "Lu-ca 2",
+      "oldTestament": "Phục truyền 26-27"
+    }
+  },
+  {
+    "dayIndex": 91,
+    "month": 4,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 91",
+      "newTestament": "Lu-ca 3",
+      "oldTestament": "Phục truyền 28"
+    }
+  },
+  {
+    "dayIndex": 92,
+    "month": 4,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 92",
+      "newTestament": "Lu-ca 4",
+      "oldTestament": "Phục truyền 29-30"
+    }
+  },
+  {
+    "dayIndex": 93,
+    "month": 4,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 93",
+      "newTestament": "Lu-ca 5",
+      "oldTestament": "Phục truyền 31-32"
+    }
+  },
+  {
+    "dayIndex": 94,
+    "month": 4,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 94",
+      "newTestament": "Lu-ca 6",
+      "oldTestament": "Phục truyền 33-34"
+    }
+  },
+  {
+    "dayIndex": 95,
+    "month": 4,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 95",
+      "newTestament": "Lu-ca 7",
+      "oldTestament": "Giô-suê 1-2"
+    }
+  },
+  {
+    "dayIndex": 96,
+    "month": 4,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 96",
+      "newTestament": "Lu-ca 8",
+      "oldTestament": "Giô-suê 3-4"
+    }
+  },
+  {
+    "dayIndex": 97,
+    "month": 4,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 97",
+      "newTestament": "Lu-ca 9",
+      "oldTestament": "Giô-suê 5-6"
+    }
+  },
+  {
+    "dayIndex": 98,
+    "month": 4,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 98",
+      "newTestament": "Lu-ca 10",
+      "oldTestament": "Giô-suê 7-8"
+    }
+  },
+  {
+    "dayIndex": 99,
+    "month": 4,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 99",
+      "newTestament": "Lu-ca 11",
+      "oldTestament": "Giô-suê 9-10"
+    }
+  },
+  {
+    "dayIndex": 100,
+    "month": 4,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 100",
+      "newTestament": "Lu-ca 12",
+      "oldTestament": "Giô-suê 11-12"
+    }
+  },
+  {
+    "dayIndex": 101,
+    "month": 4,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 101",
+      "newTestament": "Lu-ca 13",
+      "oldTestament": "Giô-suê 13-14"
+    }
+  },
+  {
+    "dayIndex": 102,
+    "month": 4,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 102",
+      "newTestament": "Lu-ca 14",
+      "oldTestament": "Giô-suê 15-16"
+    }
+  },
+  {
+    "dayIndex": 103,
+    "month": 4,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 103",
+      "newTestament": "Lu-ca 15",
+      "oldTestament": "Giô-suê 17-18"
+    }
+  },
+  {
+    "dayIndex": 104,
+    "month": 4,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 104",
+      "newTestament": "Lu-ca 16",
+      "oldTestament": "Giô-suê 19-20"
+    }
+  },
+  {
+    "dayIndex": 105,
+    "month": 4,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 105",
+      "newTestament": "Lu-ca 17",
+      "oldTestament": "Giô-suê 21-22"
+    }
+  },
+  {
+    "dayIndex": 106,
+    "month": 4,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 106",
+      "newTestament": "Lu-ca 18",
+      "oldTestament": "Giô-suê 23-24"
+    }
+  },
+  {
+    "dayIndex": 107,
+    "month": 4,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 107",
+      "newTestament": "Lu-ca 19",
+      "oldTestament": "Các quan xét 1-2"
+    }
+  },
+  {
+    "dayIndex": 108,
+    "month": 4,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 108",
+      "newTestament": "Lu-ca 20",
+      "oldTestament": "Các quan xét 3-4"
+    }
+  },
+  {
+    "dayIndex": 109,
+    "month": 4,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 109",
+      "newTestament": "Lu-ca 21",
+      "oldTestament": "Các quan xét 5-6"
+    }
+  },
+  {
+    "dayIndex": 110,
+    "month": 4,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 110",
+      "newTestament": "Lu-ca 22",
+      "oldTestament": "Các quan xét 7-8"
+    }
+  },
+  {
+    "dayIndex": 111,
+    "month": 4,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 111",
+      "newTestament": "Lu-ca 23",
+      "oldTestament": "Các quan xét 9-10"
+    }
+  },
+  {
+    "dayIndex": 112,
+    "month": 4,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 112",
+      "newTestament": "Lu-ca 24",
+      "oldTestament": "Các quan xét 11-12"
+    }
+  },
+  {
+    "dayIndex": 113,
+    "month": 4,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 113",
+      "newTestament": "I Cô-rinh-tô 1",
+      "oldTestament": "Các quan xét 13-14"
+    }
+  },
+  {
+    "dayIndex": 114,
+    "month": 4,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 114",
+      "newTestament": "I Cô-rinh-tô 2",
+      "oldTestament": "Các quan xét 15-17"
+    }
+  },
+  {
+    "dayIndex": 115,
+    "month": 4,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 115",
+      "newTestament": "I Cô-rinh-tô 3",
+      "oldTestament": "Các quan xét 18-19"
+    }
+  },
+  {
+    "dayIndex": 116,
+    "month": 4,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 116",
+      "newTestament": "I Cô-rinh-tô 4",
+      "oldTestament": "Các quan xét 20-21"
+    }
+  },
+  {
+    "dayIndex": 117,
+    "month": 4,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 117",
+      "newTestament": "I Cô-rinh-tô 5",
+      "oldTestament": "Ru-tơ 1-2"
+    }
+  },
+  {
+    "dayIndex": 118,
+    "month": 4,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 118",
+      "newTestament": "I Cô-rinh-tô 6",
+      "oldTestament": "Ru-tơ 3-4"
+    }
+  },
+  {
+    "dayIndex": 119,
+    "month": 4,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 119:1-88",
+      "newTestament": "I Cô-rinh-tô 7",
+      "oldTestament": "I Sa-mu-ên 1-2"
+    }
+  },
+  {
+    "dayIndex": 120,
+    "month": 4,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 119:89-176",
+      "newTestament": "I Cô-rinh-tô 8",
+      "oldTestament": "I Sa-mu-ên 3-4"
+    }
+  },
+  {
+    "dayIndex": 121,
+    "month": 5,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 120",
+      "newTestament": "I Cô-rinh-tô 9",
+      "oldTestament": "I Sa-mu-ên 5-7"
+    }
+  },
+  {
+    "dayIndex": 122,
+    "month": 5,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 121",
+      "newTestament": "I Cô-rinh-tô 10",
+      "oldTestament": "I Sa-mu-ên 8-9"
+    }
+  },
+  {
+    "dayIndex": 123,
+    "month": 5,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 122",
+      "newTestament": "I Cô-rinh-tô 11",
+      "oldTestament": "I Sa-mu-ên 10-11"
+    }
+  },
+  {
+    "dayIndex": 124,
+    "month": 5,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 123",
+      "newTestament": "I Cô-rinh-tô 12",
+      "oldTestament": "I Sa-mu-ên 12-13"
+    }
+  },
+  {
+    "dayIndex": 125,
+    "month": 5,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 124",
+      "newTestament": "I Cô-rinh-tô 13",
+      "oldTestament": "I Sa-mu-ên 14-15"
+    }
+  },
+  {
+    "dayIndex": 126,
+    "month": 5,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 125",
+      "newTestament": "I Cô-rinh-tô 14",
+      "oldTestament": "I Sa-mu-ên 16-17"
+    }
+  },
+  {
+    "dayIndex": 127,
+    "month": 5,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 126",
+      "newTestament": "I Cô-rinh-tô 15",
+      "oldTestament": "I Sa-mu-ên 18-19"
+    }
+  },
+  {
+    "dayIndex": 128,
+    "month": 5,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 127",
+      "newTestament": "I Cô-rinh-tô 16",
+      "oldTestament": "I Sa-mu-ên 20-21"
+    }
+  },
+  {
+    "dayIndex": 129,
+    "month": 5,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 128",
+      "newTestament": "II Cô-rinh-tô 1",
+      "oldTestament": "I Sa-mu-ên 22-23"
+    }
+  },
+  {
+    "dayIndex": 130,
+    "month": 5,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 129",
+      "newTestament": "II Cô-rinh-tô 2",
+      "oldTestament": "I Sa-mu-ên 24-25"
+    }
+  },
+  {
+    "dayIndex": 131,
+    "month": 5,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 130",
+      "newTestament": "II Cô-rinh-tô 3",
+      "oldTestament": "I Sa-mu-ên 26-27"
+    }
+  },
+  {
+    "dayIndex": 132,
+    "month": 5,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 131",
+      "newTestament": "II Cô-rinh-tô 4",
+      "oldTestament": "I Sa-mu-ên 28-29"
+    }
+  },
+  {
+    "dayIndex": 133,
+    "month": 5,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 132",
+      "newTestament": "II Cô-rinh-tô 5",
+      "oldTestament": "I Sa-mu-ên 30-31"
+    }
+  },
+  {
+    "dayIndex": 134,
+    "month": 5,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 133",
+      "newTestament": "II Cô-rinh-tô 6",
+      "oldTestament": "I Sử ký 1-2"
+    }
+  },
+  {
+    "dayIndex": 135,
+    "month": 5,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 134",
+      "newTestament": "II Cô-rinh-tô 7",
+      "oldTestament": "I Sử ký 3-4"
+    }
+  },
+  {
+    "dayIndex": 136,
+    "month": 5,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 135",
+      "newTestament": "II Cô-rinh-tô 8",
+      "oldTestament": "I Sử ký 5-7"
+    }
+  },
+  {
+    "dayIndex": 137,
+    "month": 5,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 136",
+      "newTestament": "II Cô-rinh-tô 9",
+      "oldTestament": "I Sử ký 8-10"
+    }
+  },
+  {
+    "dayIndex": 138,
+    "month": 5,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 137",
+      "newTestament": "II Cô-rinh-tô 10",
+      "oldTestament": "II Sa-mu-ên 1-2"
+    }
+  },
+  {
+    "dayIndex": 139,
+    "month": 5,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 138",
+      "newTestament": "II Cô-rinh-tô 11",
+      "oldTestament": "II Sa-mu-ên 3-4"
+    }
+  },
+  {
+    "dayIndex": 140,
+    "month": 5,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 139",
+      "newTestament": "II Cô-rinh-tô 12",
+      "oldTestament": "II Sa-mu-ên 5-6"
+    }
+  },
+  {
+    "dayIndex": 141,
+    "month": 5,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 140",
+      "newTestament": "II Cô-rinh-tô 13",
+      "oldTestament": "II Sa-mu-ên 7-8"
+    }
+  },
+  {
+    "dayIndex": 142,
+    "month": 5,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 141",
+      "newTestament": "Giăng 1",
+      "oldTestament": "II Sa-mu-ên 9-10"
+    }
+  },
+  {
+    "dayIndex": 143,
+    "month": 5,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 142",
+      "newTestament": "Giăng 2",
+      "oldTestament": "II Sa-mu-ên 11-12"
+    }
+  },
+  {
+    "dayIndex": 144,
+    "month": 5,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 143",
+      "newTestament": "Giăng 3",
+      "oldTestament": "II Sa-mu-ên 13-14"
+    }
+  },
+  {
+    "dayIndex": 145,
+    "month": 5,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 144",
+      "newTestament": "Giăng 4",
+      "oldTestament": "II Sa-mu-ên 15-16"
+    }
+  },
+  {
+    "dayIndex": 146,
+    "month": 5,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 145",
+      "newTestament": "Giăng 5",
+      "oldTestament": "II Sa-mu-ên 17-18"
+    }
+  },
+  {
+    "dayIndex": 147,
+    "month": 5,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 146",
+      "newTestament": "Giăng 6",
+      "oldTestament": "II Sa-mu-ên 19-20"
+    }
+  },
+  {
+    "dayIndex": 148,
+    "month": 5,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 147",
+      "newTestament": "Giăng 7",
+      "oldTestament": "II Sa-mu-ên 21-22"
+    }
+  },
+  {
+    "dayIndex": 149,
+    "month": 5,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 148",
+      "newTestament": "Giăng 8",
+      "oldTestament": "II Sa-mu-ên 23-24"
+    }
+  },
+  {
+    "dayIndex": 150,
+    "month": 5,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 149",
+      "newTestament": "Giăng 9",
+      "oldTestament": "I Các vua 1-2"
+    }
+  },
+  {
+    "dayIndex": 151,
+    "month": 5,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 150",
+      "newTestament": "Giăng 10",
+      "oldTestament": "I Sử ký 11-12"
+    }
+  },
+  {
+    "dayIndex": 152,
+    "month": 6,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 1",
+      "newTestament": "Giăng 11",
+      "oldTestament": "I Sử ký 13-15"
+    }
+  },
+  {
+    "dayIndex": 153,
+    "month": 6,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 2",
+      "newTestament": "Giăng 12",
+      "oldTestament": "I Sử ký 16-17"
+    }
+  },
+  {
+    "dayIndex": 154,
+    "month": 6,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 3",
+      "newTestament": "Giăng 13",
+      "oldTestament": "I Sử ký 18-19"
+    }
+  },
+  {
+    "dayIndex": 155,
+    "month": 6,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 4",
+      "newTestament": "Giăng 14",
+      "oldTestament": "I Sử ký 20-22"
+    }
+  },
+  {
+    "dayIndex": 156,
+    "month": 6,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 5",
+      "newTestament": "Giăng 15",
+      "oldTestament": "I Sử ký 23-24"
+    }
+  },
+  {
+    "dayIndex": 157,
+    "month": 6,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 6",
+      "newTestament": "Giăng 16",
+      "oldTestament": "I Sử ký 25-26"
+    }
+  },
+  {
+    "dayIndex": 158,
+    "month": 6,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 7",
+      "newTestament": "Giăng 17",
+      "oldTestament": "I Sử ký 27-29"
+    }
+  },
+  {
+    "dayIndex": 159,
+    "month": 6,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 8",
+      "newTestament": "Giăng 18",
+      "oldTestament": "I Các vua 3-4"
+    }
+  },
+  {
+    "dayIndex": 160,
+    "month": 6,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 9",
+      "newTestament": "Giăng 19",
+      "oldTestament": "Nhã ca 1-3"
+    }
+  },
+  {
+    "dayIndex": 161,
+    "month": 6,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 10",
+      "newTestament": "Giăng 20",
+      "oldTestament": "Nhã ca 4-6"
+    }
+  },
+  {
+    "dayIndex": 162,
+    "month": 6,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 11",
+      "newTestament": "Giăng 21",
+      "oldTestament": "Nhã ca 7-8"
+    }
+  },
+  {
+    "dayIndex": 163,
+    "month": 6,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 12",
+      "newTestament": "Ga-la-ti 1",
+      "oldTestament": "I Các vua 5-6"
+    }
+  },
+  {
+    "dayIndex": 164,
+    "month": 6,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 13",
+      "newTestament": "Ga-la-ti 2",
+      "oldTestament": "I Các vua 7-8"
+    }
+  },
+  {
+    "dayIndex": 165,
+    "month": 6,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 14",
+      "newTestament": "Ga-la-ti 3",
+      "oldTestament": "I Các vua 9-10"
+    }
+  },
+  {
+    "dayIndex": 166,
+    "month": 6,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 15",
+      "newTestament": "Ga-la-ti 4",
+      "oldTestament": "II Sử ký 1-3"
+    }
+  },
+  {
+    "dayIndex": 167,
+    "month": 6,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 16",
+      "newTestament": "Ga-la-ti 5",
+      "oldTestament": "II Sử ký 4-5"
+    }
+  },
+  {
+    "dayIndex": 168,
+    "month": 6,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 17",
+      "newTestament": "Ga-la-ti 6",
+      "oldTestament": "II Sử ký 6-7"
+    }
+  },
+  {
+    "dayIndex": 169,
+    "month": 6,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 18",
+      "newTestament": "Ê-phê-sô 1",
+      "oldTestament": "Truyền đạo 1-2"
+    }
+  },
+  {
+    "dayIndex": 170,
+    "month": 6,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 19",
+      "newTestament": "Ê-phê-sô 2",
+      "oldTestament": "Truyền đạo 3-5"
+    }
+  },
+  {
+    "dayIndex": 171,
+    "month": 6,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 20",
+      "newTestament": "Ê-phê-sô 3",
+      "oldTestament": "Truyền đạo 6-7"
+    }
+  },
+  {
+    "dayIndex": 172,
+    "month": 6,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 21",
+      "newTestament": "Ê-phê-sô 4",
+      "oldTestament": "Truyền đạo 8-9"
+    }
+  },
+  {
+    "dayIndex": 173,
+    "month": 6,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 22",
+      "newTestament": "Ê-phê-sô 5",
+      "oldTestament": "Truyền đạo 10-12"
+    }
+  },
+  {
+    "dayIndex": 174,
+    "month": 6,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 23",
+      "newTestament": "Ê-phê-sô 6",
+      "oldTestament": "II Sử ký 8-9"
+    }
+  },
+  {
+    "dayIndex": 175,
+    "month": 6,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 24",
+      "newTestament": "Phi-líp 1",
+      "oldTestament": "I Các vua 11-12"
+    }
+  },
+  {
+    "dayIndex": 176,
+    "month": 6,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 25",
+      "newTestament": "Phi-líp 2",
+      "oldTestament": "I Các vua 13-14"
+    }
+  },
+  {
+    "dayIndex": 177,
+    "month": 6,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 26",
+      "newTestament": "Phi-líp 3",
+      "oldTestament": "II Sử ký 10-11"
+    }
+  },
+  {
+    "dayIndex": 178,
+    "month": 6,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 27",
+      "newTestament": "Phi-líp 4",
+      "oldTestament": "II Sử ký 12-13"
+    }
+  },
+  {
+    "dayIndex": 179,
+    "month": 6,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 28",
+      "newTestament": "Cô-lô-se 1",
+      "oldTestament": "II Sử ký 14-15"
+    }
+  },
+  {
+    "dayIndex": 180,
+    "month": 6,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 29",
+      "newTestament": "Cô-lô-se 2",
+      "oldTestament": "II Sử ký 16-17"
+    }
+  },
+  {
+    "dayIndex": 181,
+    "month": 6,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 30",
+      "newTestament": "Cô-lô-se 3",
+      "oldTestament": "II Sử ký 18-19"
+    }
+  },
+  {
+    "dayIndex": 182,
+    "month": 7,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 31",
+      "newTestament": "Cô-lô-se 4",
+      "oldTestament": "I Các vua 15-16"
+    }
+  },
+  {
+    "dayIndex": 183,
+    "month": 7,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 1",
+      "newTestament": "Ma-thi-ơ 1",
+      "oldTestament": "I Các vua 17-18"
+    }
+  },
+  {
+    "dayIndex": 184,
+    "month": 7,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 2",
+      "newTestament": "Ma-thi-ơ 2",
+      "oldTestament": "I Các vua 19-20"
+    }
+  },
+  {
+    "dayIndex": 185,
+    "month": 7,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 3",
+      "newTestament": "Ma-thi-ơ 3",
+      "oldTestament": "I Các vua 21-22"
+    }
+  },
+  {
+    "dayIndex": 186,
+    "month": 7,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 4",
+      "newTestament": "Ma-thi-ơ 4",
+      "oldTestament": "II Sử ký 20-21"
+    }
+  },
+  {
+    "dayIndex": 187,
+    "month": 7,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 5",
+      "newTestament": "Ma-thi-ơ 5",
+      "oldTestament": "II Các vua 1-2"
+    }
+  },
+  {
+    "dayIndex": 188,
+    "month": 7,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 6",
+      "newTestament": "Ma-thi-ơ 6",
+      "oldTestament": "II Các vua 3-4"
+    }
+  },
+  {
+    "dayIndex": 189,
+    "month": 7,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 7",
+      "newTestament": "Ma-thi-ơ 7",
+      "oldTestament": "II Các vua 5-6"
+    }
+  },
+  {
+    "dayIndex": 190,
+    "month": 7,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 8",
+      "newTestament": "Ma-thi-ơ 8",
+      "oldTestament": "II Các vua 7-8"
+    }
+  },
+  {
+    "dayIndex": 191,
+    "month": 7,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 9",
+      "newTestament": "Ma-thi-ơ 9",
+      "oldTestament": "Áp-đia"
+    }
+  },
+  {
+    "dayIndex": 192,
+    "month": 7,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 10",
+      "newTestament": "Ma-thi-ơ 10",
+      "oldTestament": "II Sử ký 22"
+    }
+  },
+  {
+    "dayIndex": 193,
+    "month": 7,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 11",
+      "newTestament": "Ma-thi-ơ 11",
+      "oldTestament": "Giô-ên 1-3"
+    }
+  },
+  {
+    "dayIndex": 194,
+    "month": 7,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 12",
+      "newTestament": "Ma-thi-ơ 12",
+      "oldTestament": "II Các vua 9-10"
+    }
+  },
+  {
+    "dayIndex": 195,
+    "month": 7,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 13",
+      "newTestament": "Ma-thi-ơ 13",
+      "oldTestament": "II Các vua 11-12"
+    }
+  },
+  {
+    "dayIndex": 196,
+    "month": 7,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 14",
+      "newTestament": "Ma-thi-ơ 14",
+      "oldTestament": "II Các vua 13-14"
+    }
+  },
+  {
+    "dayIndex": 197,
+    "month": 7,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 15",
+      "newTestament": "Ma-thi-ơ 15",
+      "oldTestament": "Giô-na"
+    }
+  },
+  {
+    "dayIndex": 198,
+    "month": 7,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 16",
+      "newTestament": "Ma-thi-ơ 16",
+      "oldTestament": "A-mốt 1-2"
+    }
+  },
+  {
+    "dayIndex": 199,
+    "month": 7,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 17",
+      "newTestament": "Ma-thi-ơ 17",
+      "oldTestament": "A-mốt 3-5"
+    }
+  },
+  {
+    "dayIndex": 200,
+    "month": 7,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 18",
+      "newTestament": "Ma-thi-ơ 18",
+      "oldTestament": "A-mốt 6-7"
+    }
+  },
+  {
+    "dayIndex": 201,
+    "month": 7,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 19",
+      "newTestament": "Ma-thi-ơ 19",
+      "oldTestament": "A-mốt 8-9"
+    }
+  },
+  {
+    "dayIndex": 202,
+    "month": 7,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 20",
+      "newTestament": "Ma-thi-ơ 20",
+      "oldTestament": "II Sử ký 23-24"
+    }
+  },
+  {
+    "dayIndex": 203,
+    "month": 7,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 21",
+      "newTestament": "Ma-thi-ơ 21",
+      "oldTestament": "II Sử ký 25-26"
+    }
+  },
+  {
+    "dayIndex": 204,
+    "month": 7,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 22",
+      "newTestament": "Ma-thi-ơ 22",
+      "oldTestament": "Ê-sai 1-2"
+    }
+  },
+  {
+    "dayIndex": 205,
+    "month": 7,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 23",
+      "newTestament": "Ma-thi-ơ 23",
+      "oldTestament": "Ê-sai 3-4"
+    }
+  },
+  {
+    "dayIndex": 206,
+    "month": 7,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 24",
+      "newTestament": "Ma-thi-ơ 24",
+      "oldTestament": "Ê-sai 5-6"
+    }
+  },
+  {
+    "dayIndex": 207,
+    "month": 7,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 25",
+      "newTestament": "Ma-thi-ơ 25",
+      "oldTestament": "II Sử ký 27-28"
+    }
+  },
+  {
+    "dayIndex": 208,
+    "month": 7,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 26",
+      "newTestament": "Ma-thi-ơ 26",
+      "oldTestament": "II Các vua 15-16"
+    }
+  },
+  {
+    "dayIndex": 209,
+    "month": 7,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 27",
+      "newTestament": "Ma-thi-ơ 27",
+      "oldTestament": "Ê-sai 7-8"
+    }
+  },
+  {
+    "dayIndex": 210,
+    "month": 7,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 28",
+      "newTestament": "Ma-thi-ơ 28",
+      "oldTestament": "Ê-sai 9-10"
+    }
+  },
+  {
+    "dayIndex": 211,
+    "month": 7,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 29",
+      "newTestament": "I Tê-sa-lô-ni-ca 1",
+      "oldTestament": "Ê-sai 11-12"
+    }
+  },
+  {
+    "dayIndex": 212,
+    "month": 7,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 30",
+      "newTestament": "I Tê-sa-lô-ni-ca 2",
+      "oldTestament": "Ê-sai 13-14"
+    }
+  },
+  {
+    "dayIndex": 213,
+    "month": 8,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 31",
+      "newTestament": "I Tê-sa-lô-ni-ca 3",
+      "oldTestament": "Ê-sai 15-16"
+    }
+  },
+  {
+    "dayIndex": 214,
+    "month": 8,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 32",
+      "newTestament": "I Tê-sa-lô-ni-ca 4",
+      "oldTestament": "Ê-sai 17-18"
+    }
+  },
+  {
+    "dayIndex": 215,
+    "month": 8,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 33",
+      "newTestament": "I Tê-sa-lô-ni-ca 5",
+      "oldTestament": "Ê-sai 19-20"
+    }
+  },
+  {
+    "dayIndex": 216,
+    "month": 8,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 34",
+      "newTestament": "II Tê-sa-lô-ni-ca 1",
+      "oldTestament": "Ê-sai 21-22"
+    }
+  },
+  {
+    "dayIndex": 217,
+    "month": 8,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 35",
+      "newTestament": "II Tê-sa-lô-ni-ca 2",
+      "oldTestament": "Ê-sai 23-24"
+    }
+  },
+  {
+    "dayIndex": 218,
+    "month": 8,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 36",
+      "newTestament": "II Tê-sa-lô-ni-ca 3",
+      "oldTestament": "Ê-sai 25-26"
+    }
+  },
+  {
+    "dayIndex": 219,
+    "month": 8,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 37",
+      "newTestament": "I Ti-mô-thê 1",
+      "oldTestament": "Ê-sai 27-28"
+    }
+  },
+  {
+    "dayIndex": 220,
+    "month": 8,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 38",
+      "newTestament": "I Ti-mô-thê 2",
+      "oldTestament": "Ê-sai 29-30"
+    }
+  },
+  {
+    "dayIndex": 221,
+    "month": 8,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 39",
+      "newTestament": "I Ti-mô-thê 3",
+      "oldTestament": "Ê-sai 31-32"
+    }
+  },
+  {
+    "dayIndex": 222,
+    "month": 8,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 40",
+      "newTestament": "I Ti-mô-thê 4",
+      "oldTestament": "Ê-sai 33-34"
+    }
+  },
+  {
+    "dayIndex": 223,
+    "month": 8,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 41",
+      "newTestament": "I Ti-mô-thê 5",
+      "oldTestament": "Ê-sai 35-36"
+    }
+  },
+  {
+    "dayIndex": 224,
+    "month": 8,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 42",
+      "newTestament": "I Ti-mô-thê 6",
+      "oldTestament": "Ê-sai 37-38"
+    }
+  },
+  {
+    "dayIndex": 225,
+    "month": 8,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 43",
+      "newTestament": "II Ti-mô-thê 1",
+      "oldTestament": "Ê-sai 39-40"
+    }
+  },
+  {
+    "dayIndex": 226,
+    "month": 8,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 44",
+      "newTestament": "II Ti-mô-thê 2",
+      "oldTestament": "Ê-sai 41-42"
+    }
+  },
+  {
+    "dayIndex": 227,
+    "month": 8,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 45",
+      "newTestament": "II Ti-mô-thê 3",
+      "oldTestament": "Ê-sai 43-44"
+    }
+  },
+  {
+    "dayIndex": 228,
+    "month": 8,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 46",
+      "newTestament": "II Ti-mô-thê 4",
+      "oldTestament": "Ê-sai 45-46"
+    }
+  },
+  {
+    "dayIndex": 229,
+    "month": 8,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 47",
+      "newTestament": "Tít 1",
+      "oldTestament": "Ê-sai 47-48"
+    }
+  },
+  {
+    "dayIndex": 230,
+    "month": 8,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 48",
+      "newTestament": "Tít 2",
+      "oldTestament": "Ê-sai 49-50"
+    }
+  },
+  {
+    "dayIndex": 231,
+    "month": 8,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 49",
+      "newTestament": "Tít 3",
+      "oldTestament": "Ê-sai 51-52"
+    }
+  },
+  {
+    "dayIndex": 232,
+    "month": 8,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 50",
+      "newTestament": "Phi-lê-môn",
+      "oldTestament": "Ê-sai 53-54"
+    }
+  },
+  {
+    "dayIndex": 233,
+    "month": 8,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 51",
+      "newTestament": "Mác 1",
+      "oldTestament": "Ê-sai 55-56"
+    }
+  },
+  {
+    "dayIndex": 234,
+    "month": 8,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 52",
+      "newTestament": "Mác 2",
+      "oldTestament": "Ê-sai 57-58"
+    }
+  },
+  {
+    "dayIndex": 235,
+    "month": 8,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 53",
+      "newTestament": "Mác 3",
+      "oldTestament": "Ê-sai 59-60"
+    }
+  },
+  {
+    "dayIndex": 236,
+    "month": 8,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 54",
+      "newTestament": "Mác 4",
+      "oldTestament": "Ê-sai 61-62"
+    }
+  },
+  {
+    "dayIndex": 237,
+    "month": 8,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 55",
+      "newTestament": "Mác 5",
+      "oldTestament": "Ê-sai 63-64"
+    }
+  },
+  {
+    "dayIndex": 238,
+    "month": 8,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 56",
+      "newTestament": "Mác 6",
+      "oldTestament": "Ê-sai 65-66"
+    }
+  },
+  {
+    "dayIndex": 239,
+    "month": 8,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 57",
+      "newTestament": "Mác 7",
+      "oldTestament": "II Các vua 17"
+    }
+  },
+  {
+    "dayIndex": 240,
+    "month": 8,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 58",
+      "newTestament": "Mác 8",
+      "oldTestament": "II Các vua 18-19"
+    }
+  },
+  {
+    "dayIndex": 241,
+    "month": 8,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 59",
+      "newTestament": "Mác 9",
+      "oldTestament": "II Sử ký 29-30"
+    }
+  },
+  {
+    "dayIndex": 242,
+    "month": 8,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 60",
+      "newTestament": "Mác 10",
+      "oldTestament": "II Sử ký 31-32"
+    }
+  },
+  {
+    "dayIndex": 243,
+    "month": 8,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 61",
+      "newTestament": "Mác 11",
+      "oldTestament": "Ô-sê 1-3"
+    }
+  },
+  {
+    "dayIndex": 244,
+    "month": 9,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 62",
+      "newTestament": "Mác 12",
+      "oldTestament": "Ô-sê 4-5"
+    }
+  },
+  {
+    "dayIndex": 245,
+    "month": 9,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 63",
+      "newTestament": "Mác 13",
+      "oldTestament": "Ô-sê 6-7"
+    }
+  },
+  {
+    "dayIndex": 246,
+    "month": 9,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 64",
+      "newTestament": "Mác 14",
+      "oldTestament": "Ô-sê 8-10"
+    }
+  },
+  {
+    "dayIndex": 247,
+    "month": 9,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 65",
+      "newTestament": "Mác 15",
+      "oldTestament": "Ô-sê 11-12"
+    }
+  },
+  {
+    "dayIndex": 248,
+    "month": 9,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 66",
+      "newTestament": "Mác 16",
+      "oldTestament": "Ô-sê 13-14"
+    }
+  },
+  {
+    "dayIndex": 249,
+    "month": 9,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 67",
+      "newTestament": "Hê-bơ-rơ 1",
+      "oldTestament": "Mi-chê 1-2"
+    }
+  },
+  {
+    "dayIndex": 250,
+    "month": 9,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 68",
+      "newTestament": "Hê-bơ-rơ 2",
+      "oldTestament": "Mi-chê 3-5"
+    }
+  },
+  {
+    "dayIndex": 251,
+    "month": 9,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 69",
+      "newTestament": "Hê-bơ-rơ 3",
+      "oldTestament": "Mi-chê 6-7"
+    }
+  },
+  {
+    "dayIndex": 252,
+    "month": 9,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 70",
+      "newTestament": "Hê-bơ-rơ 4",
+      "oldTestament": "II Các vua 20-21"
+    }
+  },
+  {
+    "dayIndex": 253,
+    "month": 9,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 71",
+      "newTestament": "Hê-bơ-rơ 5",
+      "oldTestament": "II Sử ký 33-34"
+    }
+  },
+  {
+    "dayIndex": 254,
+    "month": 9,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 72",
+      "newTestament": "Hê-bơ-rơ 6",
+      "oldTestament": "Sô-phô-ni 1-3"
+    }
+  },
+  {
+    "dayIndex": 255,
+    "month": 9,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 73",
+      "newTestament": "Hê-bơ-rơ 7",
+      "oldTestament": "Na-hum 1-3"
+    }
+  },
+  {
+    "dayIndex": 256,
+    "month": 9,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 74",
+      "newTestament": "Hê-bơ-rơ 8",
+      "oldTestament": "II Sử ký 35"
+    }
+  },
+  {
+    "dayIndex": 257,
+    "month": 9,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 75",
+      "newTestament": "Hê-bơ-rơ 9",
+      "oldTestament": "Ha-ba-cúc"
+    }
+  },
+  {
+    "dayIndex": 258,
+    "month": 9,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 76",
+      "newTestament": "Hê-bơ-rơ 10",
+      "oldTestament": "Giê-rê-mi 1-2"
+    }
+  },
+  {
+    "dayIndex": 259,
+    "month": 9,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 77",
+      "newTestament": "Hê-bơ-rơ 11",
+      "oldTestament": "Giê-rê-mi 3-4"
+    }
+  },
+  {
+    "dayIndex": 260,
+    "month": 9,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 78",
+      "newTestament": "Hê-bơ-rơ 12",
+      "oldTestament": "Giê-rê-mi 5-6"
+    }
+  },
+  {
+    "dayIndex": 261,
+    "month": 9,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 79",
+      "newTestament": "Hê-bơ-rơ 13",
+      "oldTestament": "Giê-rê-mi 11-12"
+    }
+  },
+  {
+    "dayIndex": 262,
+    "month": 9,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 80",
+      "newTestament": "Lu-ca 1",
+      "oldTestament": "Giê-rê-mi 26"
+    }
+  },
+  {
+    "dayIndex": 263,
+    "month": 9,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 81",
+      "newTestament": "Lu-ca 2",
+      "oldTestament": "Giê-rê-mi 7-8"
+    }
+  },
+  {
+    "dayIndex": 264,
+    "month": 9,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 82",
+      "newTestament": "Lu-ca 3",
+      "oldTestament": "Giê-rê-mi 9-10"
+    }
+  },
+  {
+    "dayIndex": 265,
+    "month": 9,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 83",
+      "newTestament": "Lu-ca 4",
+      "oldTestament": "Giê-rê-mi 14-15"
+    }
+  },
+  {
+    "dayIndex": 266,
+    "month": 9,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 84",
+      "newTestament": "Lu-ca 5",
+      "oldTestament": "Giê-rê-mi 16-17"
+    }
+  },
+  {
+    "dayIndex": 267,
+    "month": 9,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 85",
+      "newTestament": "Lu-ca 6",
+      "oldTestament": "Giê-rê-mi 18-20"
+    }
+  },
+  {
+    "dayIndex": 268,
+    "month": 9,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 86",
+      "newTestament": "Lu-ca 7",
+      "oldTestament": "Giê-rê-mi 35-36"
+    }
+  },
+  {
+    "dayIndex": 269,
+    "month": 9,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 87",
+      "newTestament": "Lu-ca 8",
+      "oldTestament": "Giê-rê-mi 13, 22"
+    }
+  },
+  {
+    "dayIndex": 270,
+    "month": 9,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 88",
+      "newTestament": "Lu-ca 9",
+      "oldTestament": "Giê-rê-mi 23-24"
+    }
+  },
+  {
+    "dayIndex": 271,
+    "month": 9,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 89",
+      "newTestament": "Lu-ca 10",
+      "oldTestament": "II Các vua 22-23"
+    }
+  },
+  {
+    "dayIndex": 272,
+    "month": 9,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 90",
+      "newTestament": "Lu-ca 11",
+      "oldTestament": "II Sử ký 36:1-8"
+    }
+  },
+  {
+    "dayIndex": 273,
+    "month": 9,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 91",
+      "newTestament": "Lu-ca 12",
+      "oldTestament": "Đa-ni-ên 1-2"
+    }
+  },
+  {
+    "dayIndex": 274,
+    "month": 10,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 92",
+      "newTestament": "Lu-ca 13",
+      "oldTestament": "Đa-ni-ên 3-4"
+    }
+  },
+  {
+    "dayIndex": 275,
+    "month": 10,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 93",
+      "newTestament": "Lu-ca 14",
+      "oldTestament": "Đa-ni-ên 5-6"
+    }
+  },
+  {
+    "dayIndex": 276,
+    "month": 10,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 94",
+      "newTestament": "Lu-ca 15",
+      "oldTestament": "Đa-ni-ên 7-8"
+    }
+  },
+  {
+    "dayIndex": 277,
+    "month": 10,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 95",
+      "newTestament": "Lu-ca 16",
+      "oldTestament": "Đa-ni-ên 9-10"
+    }
+  },
+  {
+    "dayIndex": 278,
+    "month": 10,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 96",
+      "newTestament": "Lu-ca 17",
+      "oldTestament": "Đa-ni-ên 11-12"
+    }
+  },
+  {
+    "dayIndex": 279,
+    "month": 10,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 97",
+      "newTestament": "Lu-ca 18",
+      "oldTestament": "II Các vua 24-25"
+    }
+  },
+  {
+    "dayIndex": 280,
+    "month": 10,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 98",
+      "newTestament": "Lu-ca 19",
+      "oldTestament": "II Sử ký 36:9-10, Ê-xê-chi-ên 1"
+    }
+  },
+  {
+    "dayIndex": 281,
+    "month": 10,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 99",
+      "newTestament": "Lu-ca 20",
+      "oldTestament": "Ê-xê-chi-ên 2-3"
+    }
+  },
+  {
+    "dayIndex": 282,
+    "month": 10,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 100",
+      "newTestament": "Lu-ca 21",
+      "oldTestament": "Ê-xê-chi-ên 4-6"
+    }
+  },
+  {
+    "dayIndex": 283,
+    "month": 10,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 101",
+      "newTestament": "Lu-ca 22",
+      "oldTestament": "Ê-xê-chi-ên 7-8"
+    }
+  },
+  {
+    "dayIndex": 284,
+    "month": 10,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 102",
+      "newTestament": "Lu-ca 23",
+      "oldTestament": "Ê-xê-chi-ên 9-10"
+    }
+  },
+  {
+    "dayIndex": 285,
+    "month": 10,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 103",
+      "newTestament": "Lu-ca 24",
+      "oldTestament": "Ê-xê-chi-ên 11-12"
+    }
+  },
+  {
+    "dayIndex": 286,
+    "month": 10,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 104",
+      "newTestament": "Gia-cơ 1",
+      "oldTestament": "Ê-xê-chi-ên 13-14"
+    }
+  },
+  {
+    "dayIndex": 287,
+    "month": 10,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 105",
+      "newTestament": "Gia-cơ 2",
+      "oldTestament": "Ê-xê-chi-ên 15-16"
+    }
+  },
+  {
+    "dayIndex": 288,
+    "month": 10,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 106",
+      "newTestament": "Gia-cơ 3",
+      "oldTestament": "Ê-xê-chi-ên 17-18"
+    }
+  },
+  {
+    "dayIndex": 289,
+    "month": 10,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 107",
+      "newTestament": "Gia-cơ 4",
+      "oldTestament": "Ê-xê-chi-ên 19-20"
+    }
+  },
+  {
+    "dayIndex": 290,
+    "month": 10,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 108",
+      "newTestament": "Gia-cơ 5",
+      "oldTestament": "Ê-xê-chi-ên 21-22"
+    }
+  },
+  {
+    "dayIndex": 291,
+    "month": 10,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 109",
+      "newTestament": "I Phi-e-rơ 1",
+      "oldTestament": "Ê-xê-chi-ên 23-24"
+    }
+  },
+  {
+    "dayIndex": 292,
+    "month": 10,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 110",
+      "newTestament": "I Phi-e-rơ 2",
+      "oldTestament": "Ê-xê-chi-ên 25-26"
+    }
+  },
+  {
+    "dayIndex": 293,
+    "month": 10,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 111",
+      "newTestament": "I Phi-e-rơ 3",
+      "oldTestament": "Ê-xê-chi-ên 27-28"
+    }
+  },
+  {
+    "dayIndex": 294,
+    "month": 10,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 112",
+      "newTestament": "I Phi-e-rơ 4",
+      "oldTestament": "Ê-xê-chi-ên 29-30"
+    }
+  },
+  {
+    "dayIndex": 295,
+    "month": 10,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 113",
+      "newTestament": "I Phi-e-rơ 5",
+      "oldTestament": "Ê-xê-chi-ên 31-32"
+    }
+  },
+  {
+    "dayIndex": 296,
+    "month": 10,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 114",
+      "newTestament": "II Phi-e-rơ 1",
+      "oldTestament": "Ê-xê-chi-ên 33-34"
+    }
+  },
+  {
+    "dayIndex": 297,
+    "month": 10,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 115",
+      "newTestament": "II Phi-e-rơ 2",
+      "oldTestament": "Ê-xê-chi-ên 35-36"
+    }
+  },
+  {
+    "dayIndex": 298,
+    "month": 10,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 116",
+      "newTestament": "II Phi-e-rơ 3",
+      "oldTestament": "Ê-xê-chi-ên 37-38"
+    }
+  },
+  {
+    "dayIndex": 299,
+    "month": 10,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 117",
+      "newTestament": "I Giăng 1",
+      "oldTestament": "Ê-xê-chi-ên 39-40"
+    }
+  },
+  {
+    "dayIndex": 300,
+    "month": 10,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 118",
+      "newTestament": "I Giăng 2",
+      "oldTestament": "Ê-xê-chi-ên 41-42"
+    }
+  },
+  {
+    "dayIndex": 301,
+    "month": 10,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 119:1-88",
+      "newTestament": "I Giăng 3",
+      "oldTestament": "Ê-xê-chi-ên 43-44"
+    }
+  },
+  {
+    "dayIndex": 302,
+    "month": 10,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 119:89-176",
+      "newTestament": "I Giăng 4",
+      "oldTestament": "Ê-xê-chi-ên 45-46"
+    }
+  },
+  {
+    "dayIndex": 303,
+    "month": 10,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 120",
+      "newTestament": "I Giăng 5",
+      "oldTestament": "Ê-xê-chi-ên 47-48"
+    }
+  },
+  {
+    "dayIndex": 304,
+    "month": 10,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 121",
+      "newTestament": "II Giăng",
+      "oldTestament": "Giê-rê-mi 45, 25"
+    }
+  },
+  {
+    "dayIndex": 305,
+    "month": 11,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 122",
+      "newTestament": "III Giăng",
+      "oldTestament": "Giê-rê-mi 46-47"
+    }
+  },
+  {
+    "dayIndex": 306,
+    "month": 11,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 123",
+      "newTestament": "Giu-đe",
+      "oldTestament": "Giê-rê-mi 48-49"
+    }
+  },
+  {
+    "dayIndex": 307,
+    "month": 11,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 124",
+      "newTestament": "Giăng 1",
+      "oldTestament": "II Sử ký 36:11-21, Giê-rê-mi 27"
+    }
+  },
+  {
+    "dayIndex": 308,
+    "month": 11,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 125",
+      "newTestament": "Giăng 2",
+      "oldTestament": "Giê-rê-mi 28-29"
+    }
+  },
+  {
+    "dayIndex": 309,
+    "month": 11,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 126",
+      "newTestament": "Giăng 3",
+      "oldTestament": "Giê-rê-mi 50-51"
+    }
+  },
+  {
+    "dayIndex": 310,
+    "month": 11,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 127",
+      "newTestament": "Giăng 4",
+      "oldTestament": "Giê-rê-mi 30-31"
+    }
+  },
+  {
+    "dayIndex": 311,
+    "month": 11,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 128",
+      "newTestament": "Giăng 5",
+      "oldTestament": "Giê-rê-mi 32-33"
+    }
+  },
+  {
+    "dayIndex": 312,
+    "month": 11,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 129",
+      "newTestament": "Giăng 6",
+      "oldTestament": "Giê-rê-mi 21, 34"
+    }
+  },
+  {
+    "dayIndex": 313,
+    "month": 11,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 130",
+      "newTestament": "Giăng 7",
+      "oldTestament": "Giê-rê-mi 37-38"
+    }
+  },
+  {
+    "dayIndex": 314,
+    "month": 11,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 131",
+      "newTestament": "Giăng 8",
+      "oldTestament": "Giê-rê-mi 39, 52"
+    }
+  },
+  {
+    "dayIndex": 315,
+    "month": 11,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 132",
+      "newTestament": "Giăng 9",
+      "oldTestament": "Giê-rê-mi 40-42"
+    }
+  },
+  {
+    "dayIndex": 316,
+    "month": 11,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 133",
+      "newTestament": "Giăng 10",
+      "oldTestament": "Giê-rê-mi 43-44"
+    }
+  },
+  {
+    "dayIndex": 317,
+    "month": 11,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 134",
+      "newTestament": "Giăng 11",
+      "oldTestament": "Ca thương 1-2"
+    }
+  },
+  {
+    "dayIndex": 318,
+    "month": 11,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 135",
+      "newTestament": "Giăng 12",
+      "oldTestament": "Ca thương 3"
+    }
+  },
+  {
+    "dayIndex": 319,
+    "month": 11,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 136",
+      "newTestament": "Giăng 13",
+      "oldTestament": "Ca thương 4-5"
+    }
+  },
+  {
+    "dayIndex": 320,
+    "month": 11,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 137",
+      "newTestament": "Giăng 14",
+      "oldTestament": "II Sử ký 36:22-23"
+    }
+  },
+  {
+    "dayIndex": 321,
+    "month": 11,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 138",
+      "newTestament": "Giăng 15",
+      "oldTestament": "Ê-xơ-ra 1-2"
+    }
+  },
+  {
+    "dayIndex": 322,
+    "month": 11,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 139",
+      "newTestament": "Giăng 16",
+      "oldTestament": "Ê-xơ-ra 3-4"
+    }
+  },
+  {
+    "dayIndex": 323,
+    "month": 11,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 140",
+      "newTestament": "Giăng 17",
+      "oldTestament": "A-ghê 1-2"
+    }
+  },
+  {
+    "dayIndex": 324,
+    "month": 11,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 141",
+      "newTestament": "Giăng 18",
+      "oldTestament": "Xa-cha-ri 1-3"
+    }
+  },
+  {
+    "dayIndex": 325,
+    "month": 11,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 142",
+      "newTestament": "Giăng 19",
+      "oldTestament": "Xa-cha-ri 4-6"
+    }
+  },
+  {
+    "dayIndex": 326,
+    "month": 11,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 143",
+      "newTestament": "Giăng 20",
+      "oldTestament": "Xa-cha-ri 7-8"
+    }
+  },
+  {
+    "dayIndex": 327,
+    "month": 11,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 144",
+      "newTestament": "Giăng 21",
+      "oldTestament": "Xa-cha-ri 9-10"
+    }
+  },
+  {
+    "dayIndex": 328,
+    "month": 11,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 145",
+      "newTestament": "Khải huyền 1",
+      "oldTestament": "Xa-cha-ri 11-12"
+    }
+  },
+  {
+    "dayIndex": 329,
+    "month": 11,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 146",
+      "newTestament": "Khải huyền 2",
+      "oldTestament": "Xa-cha-ri 13-14"
+    }
+  },
+  {
+    "dayIndex": 330,
+    "month": 11,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 147",
+      "newTestament": "Khải huyền 3",
+      "oldTestament": "Ê-xơ-ra 5-6"
+    }
+  },
+  {
+    "dayIndex": 331,
+    "month": 11,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 148",
+      "newTestament": "Khải huyền 4",
+      "oldTestament": "Ê-xơ-tê 1-2"
+    }
+  },
+  {
+    "dayIndex": 332,
+    "month": 11,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 149",
+      "newTestament": "Khải huyền 5",
+      "oldTestament": "Ê-xơ-tê 3-4"
+    }
+  },
+  {
+    "dayIndex": 333,
+    "month": 11,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Thi Thiên 150",
+      "newTestament": "Khải huyền 6",
+      "oldTestament": "Ê-xơ-tê 5-6"
+    }
+  },
+  {
+    "dayIndex": 334,
+    "month": 11,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 1",
+      "newTestament": "Khải huyền 7",
+      "oldTestament": "Ê-xơ-tê 7-8"
+    }
+  },
+  {
+    "dayIndex": 335,
+    "month": 12,
+    "dayOfMonth": 1,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 2",
+      "newTestament": "Khải huyền 8",
+      "oldTestament": "Ê-xơ-tê 9-10"
+    }
+  },
+  {
+    "dayIndex": 336,
+    "month": 12,
+    "dayOfMonth": 2,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 3",
+      "newTestament": "Khải huyền 9",
+      "oldTestament": "Ê-xơ-ra 7-8"
+    }
+  },
+  {
+    "dayIndex": 337,
+    "month": 12,
+    "dayOfMonth": 3,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 4",
+      "newTestament": "Khải huyền 10",
+      "oldTestament": "Ê-xơ-ra 9-10"
+    }
+  },
+  {
+    "dayIndex": 338,
+    "month": 12,
+    "dayOfMonth": 4,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 5",
+      "newTestament": "Khải huyền 11",
+      "oldTestament": "Nê-hê-mi 1-3"
+    }
+  },
+  {
+    "dayIndex": 339,
+    "month": 12,
+    "dayOfMonth": 5,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 6",
+      "newTestament": "Khải huyền 12",
+      "oldTestament": "Nê-hê-mi 4-5"
+    }
+  },
+  {
+    "dayIndex": 340,
+    "month": 12,
+    "dayOfMonth": 6,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 7",
+      "newTestament": "Khải huyền 13",
+      "oldTestament": "Nê-hê-mi 6-7"
+    }
+  },
+  {
+    "dayIndex": 341,
+    "month": 12,
+    "dayOfMonth": 7,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 8",
+      "newTestament": "Khải huyền 14",
+      "oldTestament": "Nê-hê-mi 8-9"
+    }
+  },
+  {
+    "dayIndex": 342,
+    "month": 12,
+    "dayOfMonth": 8,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 9",
+      "newTestament": "Khải huyền 15",
+      "oldTestament": "Nê-hê-mi 10-11"
+    }
+  },
+  {
+    "dayIndex": 343,
+    "month": 12,
+    "dayOfMonth": 9,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 10",
+      "newTestament": "Khải huyền 16",
+      "oldTestament": "Nê-hê-mi 12-13"
+    }
+  },
+  {
+    "dayIndex": 344,
+    "month": 12,
+    "dayOfMonth": 10,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 11",
+      "newTestament": "Khải huyền 17",
+      "oldTestament": "Ma-la-chi 1-2"
+    }
+  },
+  {
+    "dayIndex": 345,
+    "month": 12,
+    "dayOfMonth": 11,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 12",
+      "newTestament": "Khải huyền 18",
+      "oldTestament": "Ma-la-chi 3-4"
+    }
+  },
+  {
+    "dayIndex": 346,
+    "month": 12,
+    "dayOfMonth": 12,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 13",
+      "newTestament": "Khải huyền 19",
+      "oldTestament": "Gióp 1-2"
+    }
+  },
+  {
+    "dayIndex": 347,
+    "month": 12,
+    "dayOfMonth": 13,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 14",
+      "newTestament": "Khải huyền 20",
+      "oldTestament": "Gióp 3-5"
+    }
+  },
+  {
+    "dayIndex": 348,
+    "month": 12,
+    "dayOfMonth": 14,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 15",
+      "newTestament": "Khải huyền 21",
+      "oldTestament": "Gióp 6-7"
+    }
+  },
+  {
+    "dayIndex": 349,
+    "month": 12,
+    "dayOfMonth": 15,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 16",
+      "newTestament": "Khải huyền 22",
+      "oldTestament": "Gióp 8-10"
+    }
+  },
+  {
+    "dayIndex": 350,
+    "month": 12,
+    "dayOfMonth": 16,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 17",
+      "newTestament": "Hê-bơ-rơ 11",
+      "oldTestament": "Gióp 11-12"
+    }
+  },
+  {
+    "dayIndex": 351,
+    "month": 12,
+    "dayOfMonth": 17,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 18",
+      "newTestament": "Hê-bơ-rơ 12",
+      "oldTestament": "Gióp 13-14"
+    }
+  },
+  {
+    "dayIndex": 352,
+    "month": 12,
+    "dayOfMonth": 18,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 19",
+      "newTestament": "Công vụ 2",
+      "oldTestament": "Gióp 15-17"
+    }
+  },
+  {
+    "dayIndex": 353,
+    "month": 12,
+    "dayOfMonth": 19,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 20",
+      "newTestament": "I Cô-rinh-tô 11",
+      "oldTestament": "Gióp 18-19"
+    }
+  },
+  {
+    "dayIndex": 354,
+    "month": 12,
+    "dayOfMonth": 20,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 21",
+      "newTestament": "I Cô-rinh-tô 12",
+      "oldTestament": "Gióp 20-21"
+    }
+  },
+  {
+    "dayIndex": 355,
+    "month": 12,
+    "dayOfMonth": 21,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 22",
+      "newTestament": "I Cô-rinh-tô 13",
+      "oldTestament": "Gióp 22-24"
+    }
+  },
+  {
+    "dayIndex": 356,
+    "month": 12,
+    "dayOfMonth": 22,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 23",
+      "newTestament": "I Cô-rinh-tô 14",
+      "oldTestament": "Gióp 25-26"
+    }
+  },
+  {
+    "dayIndex": 357,
+    "month": 12,
+    "dayOfMonth": 23,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 24",
+      "newTestament": "I Cô-rinh-tô 15",
+      "oldTestament": "Gióp 27-28"
+    }
+  },
+  {
+    "dayIndex": 358,
+    "month": 12,
+    "dayOfMonth": 24,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 25",
+      "newTestament": "Lu-ca 1",
+      "oldTestament": "Gióp 29-31"
+    }
+  },
+  {
+    "dayIndex": 359,
+    "month": 12,
+    "dayOfMonth": 25,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 26",
+      "newTestament": "Lu-ca 2",
+      "oldTestament": "Gióp 32-33"
+    }
+  },
+  {
+    "dayIndex": 360,
+    "month": 12,
+    "dayOfMonth": 26,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 27",
+      "newTestament": "Lu-ca 3",
+      "oldTestament": "Gióp 34-35"
+    }
+  },
+  {
+    "dayIndex": 361,
+    "month": 12,
+    "dayOfMonth": 27,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 28",
+      "newTestament": "Lu-ca 4",
+      "oldTestament": "Gióp 36-37"
+    }
+  },
+  {
+    "dayIndex": 362,
+    "month": 12,
+    "dayOfMonth": 28,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 29",
+      "newTestament": "Phi-líp 1",
+      "oldTestament": "Gióp 38-39"
+    }
+  },
+  {
+    "dayIndex": 363,
+    "month": 12,
+    "dayOfMonth": 29,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 30",
+      "newTestament": "Phi-líp 2",
+      "oldTestament": "Gióp 40-41"
+    }
+  },
+  {
+    "dayIndex": 364,
+    "month": 12,
+    "dayOfMonth": 30,
+    "readings": {
+      "psalmsProverbs": "Châm ngôn 31",
+      "newTestament": "Phi-líp 3",
+      "oldTestament": "Gióp 42"
+    }
+  },
+  {
+    "dayIndex": 365,
+    "month": 12,
+    "dayOfMonth": 31,
+    "readings": {
+      "psalmsProverbs": "Thi thiên 91",
+      "newTestament": "Phi-líp 4",
+      "oldTestament": "Thi thiên 111, 113"
+    }
+  }
+]
