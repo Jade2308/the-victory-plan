@@ -1,8 +1,17 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase.js';
 
+function getAuthRedirectUrl() {
+  const configuredUrl = import.meta.env.VITE_AUTH_REDIRECT_URL?.trim();
+  if (configuredUrl) return configuredUrl;
+
+  // Preserve the Vite base path when the app is hosted below a domain root.
+  return new URL(import.meta.env.BASE_URL, window.location.origin).toString();
+}
+
 export function useSupabaseSync(localData) {
   const [user, setUser] = useState(null);
+  const [authReady, setAuthReady] = useState(!isSupabaseConfigured);
   const [syncStatus, setSyncStatus] = useState('idle');
   const [lastSynced, setLastSynced] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
@@ -11,6 +20,7 @@ export function useSupabaseSync(localData) {
     if (!isSupabaseConfigured || !supabase) return;
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
+      setAuthReady(true);
     });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, session) => {
       setUser(session?.user ?? null);
@@ -28,6 +38,34 @@ export function useSupabaseSync(localData) {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) throw error;
     setUser(data.user);
+    return data;
+  };
+
+  const signInWithGoogle = async () => {
+    if (!supabase) throw new Error('Supabase chưa được cấu hình.');
+
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: getAuthRedirectUrl(),
+        // Redirect explicitly instead of relying on the SDK's implicit navigation.
+        // This also works reliably in embedded browsers and PWAs.
+        skipBrowserRedirect: true,
+      },
+    });
+    if (error) throw error;
+    if (!data?.url) throw new Error('Không nhận được URL đăng nhập Google từ Supabase.');
+
+    window.location.assign(data.url);
+    return data;
+  };
+
+  const sendMagicLink = async (email) => {
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: getAuthRedirectUrl() },
+    });
+    if (error) throw error;
     return data;
   };
 
@@ -142,8 +180,8 @@ export function useSupabaseSync(localData) {
   }, [user]);
 
   return {
-    isConfigured: isSupabaseConfigured,
+    isConfigured: isSupabaseConfigured, authReady,
     user, syncStatus, lastSynced, errorMessage,
-    signUp, signIn, signOut, syncToCloud, pullFromCloud,
+    signUp, signIn, signInWithGoogle, sendMagicLink, signOut, syncToCloud, pullFromCloud,
   };
 }

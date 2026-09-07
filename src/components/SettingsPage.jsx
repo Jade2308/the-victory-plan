@@ -1,17 +1,15 @@
 import { useState, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext.jsx';
 import { useNotifications } from '../hooks/useNotifications.js';
-import { useSupabaseSync } from '../hooks/useSupabaseSync.js';
 import { Card, Button, Badge } from './ui/Primitives.jsx';
 import CloudSyncCard from './CloudSyncCard.jsx';
 import {
   User, Calendar, Bell, Download, Upload, Moon, Sun, Monitor, Trash2, Check, Cloud, Save, BarChart2
 } from 'lucide-react';
 
-export default function SettingsPage({ settings, onUpdate, totalCompleted, currentDayIndex, theme, onImport, localData, onNavigateTab }) {
+export default function SettingsPage({ settings, onUpdate, totalCompleted, currentDayIndex, theme, onImport, localData, onNavigateTab, syncHook }) {
   const isLight = theme === 'light';
   const { schedule, saveSchedule, permission, requestPermission, sendTestNotification } = useNotifications();
-  const syncHook = useSupabaseSync(localData);
   
   const [name, setName] = useState(settings.userName || '');
   const [savedName, setSavedName] = useState(false);
@@ -62,12 +60,12 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
     h2: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
     sub: isLight ? 'text-slate-600' : 'text-slate-400',
     sectionTitle: isLight ? 'text-slate-900 font-semibold' : 'text-slate-100 font-semibold',
-    card: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-slate-950 border-slate-800',
+    card: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-[#0b1410] border-[#23372d]',
     label: isLight ? 'text-slate-800 font-semibold' : 'text-slate-200 font-semibold',
     input: isLight
-      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-indigo-500'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-indigo-500',
-    divider: isLight ? 'border-slate-200' : 'border-slate-800',
+      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500',
+    divider: isLight ? 'border-slate-200' : 'border-[#23372d]',
   };
 
   return (
@@ -82,7 +80,7 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
         {/* Profile */}
         <div className="animate-fade-in-up" style={{ animationDelay: '0.05s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <User className="w-4 h-4 text-indigo-500" /> Hồ sơ
+            <User className="w-4 h-4 text-emerald-500" /> Hồ sơ
           </h3>
           <Card className={`p-4 space-y-4 ${t.card}`}>
             <div>
@@ -114,16 +112,16 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
         {/* Progress & Stats Shortcuts for Mobile */}
         <div className="md:hidden animate-fade-in-up" style={{ animationDelay: '0.08s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <BarChart2 className="w-4 h-4 text-indigo-500" /> Thống kê & Tiến độ
+            <BarChart2 className="w-4 h-4 text-emerald-500" /> Thống kê & Tiến độ
           </h3>
           <div className="grid grid-cols-2 gap-3">
             <Card className={`p-4 text-center cursor-pointer transition-all ${t.card}`} onClick={() => onNavigateTab?.('weekly')}>
-              <BarChart2 className="w-6 h-6 mx-auto mb-1.5 text-indigo-500" />
+              <BarChart2 className="w-6 h-6 mx-auto mb-1.5 text-emerald-500" />
               <p className={`text-sm font-bold ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>Tuần này</p>
               <p className={`text-xs ${t.sub}`}>Tiến độ 7 ngày</p>
             </Card>
             <Card className={`p-4 text-center cursor-pointer transition-all ${t.card}`} onClick={() => onNavigateTab?.('heatmap')}>
-              <Calendar className="w-6 h-6 mx-auto mb-1.5 text-indigo-500" />
+              <Calendar className="w-6 h-6 mx-auto mb-1.5 text-emerald-500" />
               <p className={`text-sm font-bold ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>Cả năm</p>
               <p className={`text-xs ${t.sub}`}>Bản đồ 365 ngày</p>
             </Card>
@@ -133,15 +131,15 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
         {/* Cloud Sync */}
         <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <Cloud className="w-4 h-4 text-indigo-500" /> Đồng bộ Đám mây
+            <Cloud className="w-4 h-4 text-emerald-500" /> Đồng bộ Đám mây
           </h3>
-          <CloudSyncCard syncHook={syncHook} localData={localData} />
+          <CloudSyncCard syncHook={syncHook} localData={localData} onImport={onImport} />
         </div>
 
         {/* Notifications */}
         <div className="animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <Bell className="w-4 h-4 text-indigo-500" /> Thông báo nhắc nhở
+            <Bell className="w-4 h-4 text-emerald-500" /> Thông báo nhắc nhở
           </h3>
           <Card className={`p-4 space-y-4 ${t.card}`}>
             <div className="flex items-center justify-between">
@@ -166,7 +164,7 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
                     saveSchedule({ ...schedule, enabled });
                   }}
                 />
-                <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-700 peer-checked:bg-indigo-600"></div>
+                <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-[#1a2b23] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-[#2c4337] peer-checked:bg-emerald-600"></div>
               </label>
             </div>
 
@@ -195,7 +193,7 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
         {/* Local Data Management */}
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <Monitor className="w-4 h-4 text-indigo-500" /> Dữ liệu cục bộ
+            <Monitor className="w-4 h-4 text-emerald-500" /> Dữ liệu cục bộ
           </h3>
           <Card className={`p-4 space-y-3 ${t.card}`}>
             <Button variant="secondary" className="w-full justify-start" onClick={handleExport}>

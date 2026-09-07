@@ -24,7 +24,7 @@ export default function YearHeatmap({ progress, startDate, currentDayIndex, isDa
 
   const getCellColor = (dayIndex) => {
     if (dayIndex > currentDayIndex) {
-      return isLight ? 'bg-slate-200' : 'bg-slate-800/80';
+      return isLight ? 'bg-slate-200' : 'bg-[#1a2b23]';
     }
     if (isDayComplete(dayIndex)) {
       return 'bg-emerald-500';
@@ -32,7 +32,7 @@ export default function YearHeatmap({ progress, startDate, currentDayIndex, isDa
     if (isDayMissed(dayIndex)) {
       return isLight ? 'bg-red-400' : 'bg-red-500/70';
     }
-    return 'bg-indigo-500'; // today / in progress
+    return 'bg-emerald-500'; // today / in progress
   };
 
   const totalComplete = Object.keys(progress).filter(k => isDayComplete(parseInt(k))).length;
@@ -57,7 +57,7 @@ export default function YearHeatmap({ progress, startDate, currentDayIndex, isDa
         {[
           { val: totalComplete, label: 'Hoàn thành', color: 'text-emerald-600 dark:text-emerald-400' },
           { val: totalMissed, label: 'Bỏ lỡ', color: 'text-red-600 dark:text-red-400' },
-          { val: 365 - currentDayIndex, label: 'Còn lại', color: 'text-indigo-600 dark:text-indigo-400' },
+          { val: 365 - currentDayIndex, label: 'Còn lại', color: 'text-emerald-600 dark:text-emerald-400' },
         ].map(({ val, label, color }) => (
           <Card key={label} className="p-3 text-center">
             <div className={`text-2xl font-bold ${color}`}>{val}</div>
@@ -86,12 +86,12 @@ export default function YearHeatmap({ progress, startDate, currentDayIndex, isDa
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-4 mt-4 flex-wrap pt-3 border-t border-slate-200 dark:border-slate-800">
+        <div className="flex items-center gap-4 mt-4 flex-wrap pt-3 border-t border-slate-200 dark:border-[#23372d]">
           {[
             { color: 'bg-emerald-500', label: 'Hoàn thành' },
             { color: isLight ? 'bg-red-400' : 'bg-red-500/70', label: 'Bỏ lỡ' },
-            { color: 'bg-indigo-500', label: 'Hôm nay' },
-            { color: isLight ? 'bg-slate-200' : 'bg-slate-800/80', label: 'Tương lai' },
+            { color: 'bg-emerald-500', label: 'Hôm nay' },
+            { color: isLight ? 'bg-slate-200' : 'bg-[#1a2b23]', label: 'Tương lai' },
           ].map(({ color, label }) => (
             <div key={label} className="flex items-center gap-1.5">
               <div className={`w-3 h-3 rounded-[3px] ${color}`} />

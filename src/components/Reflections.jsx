@@ -21,19 +21,19 @@ export default function Reflections({ reflections, currentDayIndex, onSave }) {
   const t = {
     h2: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
     sub: isLight ? 'text-slate-600' : 'text-slate-400',
-    rowHover: isLight ? 'hover:bg-slate-50' : 'hover:bg-slate-900/50',
+    rowHover: isLight ? 'hover:bg-slate-50' : 'hover:bg-[#112019]/50',
     monthTitle: isLight ? 'text-slate-900 font-semibold' : 'text-slate-100 font-semibold',
     monthSub: isLight ? 'text-slate-500' : 'text-slate-400',
     chevron: isLight ? 'text-slate-500' : 'text-slate-400',
-    borderSep: isLight ? 'border-slate-200' : 'border-slate-800',
+    borderSep: isLight ? 'border-slate-200' : 'border-[#23372d]',
     quote: isLight ? 'text-slate-700 font-medium' : 'text-slate-300 font-medium',
     textarea: isLight
       ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-emerald-500',
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500',
     saveBtn: isLight
       ? 'bg-emerald-600 hover:bg-emerald-700 text-white font-medium shadow-xs'
       : 'bg-emerald-600 hover:bg-emerald-500 text-white font-medium shadow-xs',
-    iconBg: isLight ? 'bg-emerald-50 border-emerald-200' : 'bg-emerald-950 border-emerald-800',
+    iconBg: isLight ? 'bg-emerald-50 border-emerald-200' : 'bg-[#112019] border-[#2c4337]',
   };
 
   return (

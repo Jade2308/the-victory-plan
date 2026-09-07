@@ -3,6 +3,7 @@ import {
   Sun, Moon, BookMarked
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext.jsx';
+import { BRAND_NAME, BRAND_TAGLINE } from '../lib/branding.js';
 
 const DESKTOP_NAV_ITEMS = [
   { id: 'dashboard', label: 'Hôm nay', icon: Home },
@@ -31,18 +32,18 @@ export default function Layout({
 
   const sidebarBg = isLight
     ? 'bg-white border-slate-200 text-slate-800'
-    : 'bg-slate-950 border-slate-800 text-slate-100';
+    : 'bg-[#0b1410] border-[#23372d] text-slate-100';
   
   const logoText = isLight ? 'text-slate-900' : 'text-white';
   const logoSub = isLight ? 'text-slate-500' : 'text-slate-400';
   
-  const progressBg = isLight ? 'bg-slate-100 border border-slate-200' : 'bg-slate-900 border border-slate-800';
+  const progressBg = isLight ? 'bg-slate-100 border border-slate-200' : 'bg-[#112019] border border-[#23372d]';
   const progressText = isLight ? 'text-slate-900' : 'text-slate-100';
   const progressSub = isLight ? 'text-slate-500' : 'text-slate-400';
   
   const mainBg = isLight
     ? 'bg-slate-50 text-slate-900'
-    : 'bg-slate-900 text-slate-100';
+    : 'bg-[#0b1410] text-slate-100';
 
   const percent = Math.round((totalCompleted / 365) * 100);
   const circumference = 2 * Math.PI * 20;
@@ -54,12 +55,12 @@ export default function Layout({
       <aside className={`hidden md:flex flex-col w-60 flex-shrink-0 border-r ${sidebarBg}`}>
         {/* Logo */}
         <div className="px-5 pt-6 pb-4 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-md">
-            <BookOpen className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-md">
+            <img src="/victory-plan-mark.svg" alt="Victory Plan" className="w-full h-full" />
           </div>
           <div>
-            <p className={`font-bold text-base leading-tight ${logoText}`}>Victory Plan</p>
-            <p className={`text-xs ${logoSub}`}>365-Day Bible Plan</p>
+            <p className={`font-bold text-base leading-tight ${logoText}`}>{BRAND_NAME}</p>
+            <p className={`text-xs ${logoSub}`}>{BRAND_TAGLINE}</p>
           </div>
         </div>
 
@@ -71,7 +72,7 @@ export default function Layout({
                 <circle cx="24" cy="24" r="20" fill="none"
                   stroke={isLight ? '#cbd5e1' : '#334155'} strokeWidth="4" />
                 <circle cx="24" cy="24" r="20" fill="none"
-                  stroke="#6366f1" strokeWidth="4"
+                  stroke="#10b981" strokeWidth="4"
                   strokeDasharray={`${strokeDash} ${circumference}`}
                   strokeLinecap="round" />
               </svg>
@@ -81,7 +82,7 @@ export default function Layout({
             </div>
             <div>
               <p className={`text-base font-bold ${progressText}`}>
-                <span className="text-indigo-600 dark:text-indigo-400">{totalCompleted}</span>
+                <span className="text-emerald-600 dark:text-emerald-400">{totalCompleted}</span>
                 <span className={`text-xs font-normal ${progressSub}`}>/365</span>
               </p>
               <p className={`text-xs ${progressSub}`}>ngày hoàn thành</p>
@@ -99,13 +100,13 @@ export default function Layout({
                 className={`w-full flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                   active
                     ? isLight
-                      ? 'bg-indigo-50 text-indigo-700 font-semibold border border-indigo-200'
-                      : 'bg-indigo-950/80 text-indigo-300 font-semibold border border-indigo-800/60'
+                      ? 'bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200'
+                      : 'bg-[#112019] text-emerald-300 font-semibold border border-[#2c4337]'
                     : isLight
                       ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                      : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
+                      : 'text-slate-400 hover:text-slate-100 hover:bg-[#112019]'
                 }`}>
-                <Icon className={`w-4 h-4 flex-shrink-0 ${active ? (isLight ? 'text-indigo-600' : 'text-indigo-400') : ''}`} />
+                <Icon className={`w-4 h-4 flex-shrink-0 ${active ? (isLight ? 'text-emerald-600' : 'text-emerald-400') : ''}`} />
                 {label}
               </button>
             );
@@ -113,14 +114,14 @@ export default function Layout({
         </nav>
 
         {/* Theme toggle switch */}
-        <div className="px-4 pb-5 pt-3 border-t border-slate-200 dark:border-slate-800">
+        <div className="px-4 pb-5 pt-3 border-t border-slate-200 dark:border-[#23372d]">
           <button
             id="sidebar-theme-toggle"
             onClick={onToggleTheme}
             className={`w-full flex items-center justify-between p-1 rounded-xl border transition-all cursor-pointer select-none ${
               isLight
                 ? 'bg-slate-100 border-slate-200'
-                : 'bg-slate-900 border-slate-800'
+                : 'bg-[#112019] border-[#23372d]'
             }`}
           >
             {/* Sun Side */}
@@ -136,7 +137,7 @@ export default function Layout({
             {/* Moon Side */}
             <div className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               !isLight
-                ? 'bg-indigo-950 text-indigo-300 border border-indigo-800/80 shadow-xs'
+                ? 'bg-[#112019] text-emerald-300 border border-[#2c4337] shadow-xs'
                 : 'text-slate-400 hover:text-slate-600'
             }`}>
               <Moon className="w-3.5 h-3.5" />
@@ -150,15 +151,15 @@ export default function Layout({
       <main className="flex-1 flex flex-col overflow-hidden relative">
         {/* Mobile Header Bar */}
         <header className={`md:hidden flex items-center justify-between px-4 py-3 border-b flex-shrink-0 ${
-          isLight ? 'bg-white border-slate-200' : 'bg-slate-950 border-slate-800'
+          isLight ? 'bg-white border-slate-200' : 'bg-[#0b1410] border-[#23372d]'
         }`}>
           <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => setActiveTab('heatmap')}>
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-xs">
-              <BookOpen className="w-4 h-4 text-white" />
+            <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center shadow-xs">
+              <img src="/victory-plan-mark.svg" alt="Victory Plan" className="w-full h-full" />
             </div>
             <div>
-              <p className={`font-bold text-sm leading-none ${logoText}`}>Victory Plan</p>
-              <p className={`text-[10px] ${logoSub} mt-0.5 font-medium text-indigo-600 dark:text-indigo-400`}>
+              <p className={`font-bold text-sm leading-none ${logoText}`}>{BRAND_NAME}</p>
+              <p className={`text-[10px] ${logoSub} mt-0.5 font-medium text-emerald-600 dark:text-emerald-400`}>
                 {totalCompleted}/365 ngày ({percent}%)
               </p>
             </div>
@@ -171,10 +172,10 @@ export default function Layout({
               onClick={() => setActiveTab('weekly')}
               className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer ${
                 activeTab === 'weekly' || activeTab === 'heatmap'
-                  ? 'bg-indigo-600 text-white border-indigo-600'
+                  ? 'bg-emerald-600 text-white border-emerald-600'
                   : isLight
-                    ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
-                    : 'bg-indigo-950 border-indigo-800 text-indigo-300'
+                    ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
+                    : 'bg-[#112019] border-[#2c4337] text-emerald-300'
               }`}
             >
               <BarChart2 className="w-3.5 h-3.5" />
@@ -188,7 +189,7 @@ export default function Layout({
               className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer ${
                 isLight
                   ? 'bg-slate-100 border-slate-200 text-amber-600'
-                  : 'bg-slate-900 border-slate-800 text-indigo-300'
+                  : 'bg-[#112019] border-[#23372d] text-emerald-300'
               }`}
             >
               {isLight ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
@@ -204,7 +205,7 @@ export default function Layout({
 
         {/* ── Mobile Bottom Navigation Bar (5 core items max, clean touch targets) ── */}
         <nav className={`md:hidden fixed bottom-0 left-0 right-0 border-t z-40 backdrop-blur-md ${
-          isLight ? 'bg-white/95 border-slate-200 shadow-lg' : 'bg-slate-950/95 border-slate-800 shadow-lg'
+          isLight ? 'bg-white/95 border-slate-200 shadow-lg' : 'bg-[#0b1410]/95 border-[#23372d] shadow-lg'
         }`}>
           <div className="flex items-center justify-around h-16 px-1">
             {MOBILE_NAV_ITEMS.map(({ id, label, icon: Icon }) => {
@@ -215,15 +216,15 @@ export default function Layout({
                   className={`flex flex-col items-center justify-center flex-1 h-full py-1 gap-1 transition-all cursor-pointer ${
                     active
                       ? isLight
-                        ? 'text-indigo-600 font-bold'
-                        : 'text-indigo-400 font-bold'
+                        ? 'text-emerald-600 font-bold'
+                        : 'text-emerald-400 font-bold'
                       : isLight
                         ? 'text-slate-500 hover:text-slate-800'
                         : 'text-slate-400 hover:text-slate-200'
                   }`}>
                   <div className={`p-1 rounded-xl transition-all ${
                     active
-                      ? isLight ? 'bg-indigo-50' : 'bg-indigo-950/80 border border-indigo-800/60'
+                        ? isLight ? 'bg-emerald-50' : 'bg-[#112019] border border-[#2c4337]'
                       : ''
                   }`}>
                     <Icon className="w-5 h-5" />

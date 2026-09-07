@@ -11,8 +11,8 @@ export default function CatchUp({ schedule, progress, isDayMissed, onMarkReading
   const t = {
     h2: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
     sub: isLight ? 'text-slate-600' : 'text-slate-400',
-    headerBorder: isLight ? 'border-slate-200' : 'border-slate-800',
-    dayNumBg: isLight ? 'bg-slate-100 text-slate-700 font-bold' : 'bg-slate-900 text-slate-300 font-bold',
+    headerBorder: isLight ? 'border-slate-200' : 'border-[#23372d]',
+    dayNumBg: isLight ? 'bg-slate-100 text-slate-700 font-bold' : 'bg-[#112019] text-slate-300 font-bold',
     dayNumBgPartial: isLight ? 'bg-amber-100 text-amber-900 font-bold' : 'bg-amber-950 text-amber-300 font-bold border border-amber-800',
     dayTitle: isLight ? 'text-slate-900 font-semibold' : 'text-slate-100 font-semibold',
     dayMeta: isLight ? 'text-slate-500' : 'text-slate-400',

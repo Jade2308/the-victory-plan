@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeContext } from './context/ThemeContext.jsx';
 import { useAppState } from './hooks/useAppState.js';
 import { useSchedule } from './hooks/useSchedule.js';
@@ -12,6 +12,8 @@ import YearHeatmap from './components/YearHeatmap.jsx';
 import SettingsPage from './components/SettingsPage.jsx';
 import MonthlyPrompt from './components/MonthlyPrompt.jsx';
 import Onboarding from './components/Onboarding.jsx';
+import WelcomeScreen from './components/WelcomeScreen.jsx';
+import { useSupabaseSync } from './hooks/useSupabaseSync.js';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -34,6 +36,18 @@ export default function App() {
     importAllData,
   } = useAppState();
 
+  const localData = { settings, progress, journals, verses, reflections };
+  const syncHook = useSupabaseSync(localData);
+  const [guestMode, setGuestMode] = useState(() => localStorage.getItem('ct_entry_choice') === 'guest');
+
+  useEffect(() => {
+    const pendingName = sessionStorage.getItem('ct_pending_user_name')?.trim();
+    if (!pendingName || !syncHook.user) return;
+
+    setSettings(prev => ({ ...prev, userName: pendingName }));
+    sessionStorage.removeItem('ct_pending_user_name');
+  }, [syncHook.user, setSettings]);
+
   const { schedule, loading, getDayData } = useSchedule();
 
   const theme = settings.theme || 'dark';
@@ -44,6 +58,21 @@ export default function App() {
   const handleToggleTheme = () => {
     setSettings(prev => ({ ...prev, theme: prev.theme === 'dark' ? 'light' : 'dark' }));
   };
+
+  if (!syncHook.authReady) {
+    return <div className="min-h-screen flex items-center justify-center bg-[#0b1410] text-slate-400 text-sm">Đang chuẩn bị...</div>;
+  }
+
+  if (!syncHook.user && !guestMode) {
+    return (
+      <ThemeContext.Provider value={theme}>
+        <WelcomeScreen syncHook={syncHook} onContinueAsGuest={() => {
+          localStorage.setItem('ct_entry_choice', 'guest');
+          setGuestMode(true);
+        }} />
+      </ThemeContext.Provider>
+    );
+  }
 
   // Show onboarding if no startDate set
   if (!settings.startDate) {
@@ -56,7 +85,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-950">
+      <div className="min-h-screen flex items-center justify-center bg-[#0b1410]">
         <div className="text-slate-400 text-sm">Đang tải kế hoạch...</div>
       </div>
     );
@@ -78,6 +107,7 @@ export default function App() {
             onSaveJournal={saveJournal}
             userName={settings.userName}
             onNavigateTab={setActiveTab}
+            syncHook={syncHook}
             missedCount={missedCount}
             verses={verses}
             onAddVerse={addVerse}
@@ -143,6 +173,7 @@ export default function App() {
             onImport={importAllData}
             localData={{ settings, progress, journals, verses, reflections }}
             onNavigateTab={setActiveTab}
+            syncHook={syncHook}
           />
         );
       default:

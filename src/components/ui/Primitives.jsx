@@ -7,7 +7,7 @@ export function Badge({ children, variant = 'default' }) {
   const variants = {
     default: isLight
       ? 'bg-slate-100 text-slate-700 border border-slate-300'
-      : 'bg-slate-800 text-slate-300 border border-slate-700',
+      : 'bg-[#1a2b23] text-slate-300 border border-[#2c4337]',
     success: isLight
       ? 'bg-emerald-100 text-emerald-800 border border-emerald-300 font-medium'
       : 'bg-emerald-950 text-emerald-300 border border-emerald-800 font-medium',
@@ -18,8 +18,8 @@ export function Badge({ children, variant = 'default' }) {
       ? 'bg-red-100 text-red-800 border border-red-300 font-medium'
       : 'bg-red-950 text-red-300 border border-red-800 font-medium',
     info: isLight
-      ? 'bg-indigo-100 text-indigo-800 border border-indigo-300 font-medium'
-      : 'bg-indigo-950 text-indigo-300 border border-indigo-800 font-medium',
+      ? 'bg-emerald-100 text-emerald-800 border border-emerald-300 font-medium'
+      : 'bg-emerald-950 text-emerald-300 border border-emerald-800 font-medium',
   };
 
   return (
@@ -36,7 +36,7 @@ export function EmptyState({ icon, title, description, action }) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-6 text-center">
       <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4 border ${
-        isLight ? 'bg-white border-slate-200 text-slate-800' : 'bg-slate-900 border-slate-800 text-slate-200'
+        isLight ? 'bg-white border-slate-200 text-slate-800' : 'bg-[#112019] border-[#23372d] text-slate-200'
       }`}>
         {icon}
       </div>
@@ -59,15 +59,15 @@ export function Button({ children, onClick, variant = 'primary', size = 'md', cl
   const getVariantClass = () => {
     switch (variant) {
       case 'primary':
-        return 'bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-sm';
+        return 'bg-emerald-600 hover:bg-emerald-500 text-white font-medium shadow-sm';
       case 'secondary':
         return isLight
           ? 'bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-xs'
-          : 'bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700';
+          : 'bg-[#112019] hover:bg-[#1a2b23] text-slate-200 border border-[#2c4337]';
       case 'ghost':
         return isLight
           ? 'hover:bg-slate-100 text-slate-700 hover:text-slate-900'
-          : 'hover:bg-slate-800 text-slate-400 hover:text-slate-200';
+          : 'hover:bg-[#1a2b23] text-slate-400 hover:text-slate-200';
       case 'danger':
         return isLight
           ? 'bg-red-50 hover:bg-red-100 text-red-700 border border-red-300'
@@ -96,7 +96,7 @@ export function Card({ children, className = '', onClick, id }) {
   const isLight = theme === 'light';
   const base = isLight
     ? 'bg-white border border-slate-200 text-slate-900 shadow-xs'
-    : 'bg-slate-950 border border-slate-800 text-slate-100';
+    : 'bg-[#0b1410] border border-[#23372d] text-slate-100';
 
   return (
     <div id={id}
@@ -119,7 +119,7 @@ export function Modal({ open, onClose, title, children }) {
       <div className={`relative w-full max-w-md rounded-2xl p-6 shadow-2xl border animate-fade-in-up ${
         isLight
           ? 'bg-white border-slate-300 text-slate-900'
-          : 'bg-slate-950 border-slate-800 text-slate-100'
+          : 'bg-[#0b1410] border-[#23372d] text-slate-100'
       }`}>
         <div className="flex items-center justify-between mb-4">
           <h3 className={`text-lg font-bold ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>
@@ -127,7 +127,7 @@ export function Modal({ open, onClose, title, children }) {
           </h3>
           <button onClick={onClose}
             className={`p-1.5 rounded-lg transition-colors ${
-              isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-slate-800 text-slate-400'
+              isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-[#1a2b23] text-slate-400'
             }`}>
             ✕
           </button>

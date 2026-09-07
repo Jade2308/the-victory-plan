@@ -3,7 +3,7 @@ import { Cloud, Save, Download, LogIn, UserPlus, LogOut, Loader2, AlertCircle, C
 import { useTheme } from '../context/ThemeContext.jsx';
 import { Button } from './ui/Primitives.jsx';
 
-export default function CloudSyncCard({ syncHook, localData }) {
+export default function CloudSyncCard({ syncHook, localData, onImport }) {
   const theme = useTheme();
   const isLight = theme === 'light';
   
@@ -34,23 +34,31 @@ export default function CloudSyncCard({ syncHook, localData }) {
     }
   };
 
+  const handlePull = async () => {
+    const cloudData = await pullFromCloud();
+    if (cloudData) {
+      onImport?.(cloudData);
+      alert('Đã phục hồi dữ liệu từ đám mây.');
+    }
+  };
+
   const t = {
-    card: isLight ? 'bg-white border-slate-200 text-slate-900 shadow-xs' : 'bg-slate-950 border-slate-800 text-slate-100',
+    card: isLight ? 'bg-white border-slate-200 text-slate-900 shadow-xs' : 'bg-[#0b1410] border-[#23372d] text-slate-100',
     text: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
     sub: isLight ? 'text-slate-500' : 'text-slate-400',
     input: isLight
-      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-indigo-500'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-indigo-500',
+      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500',
     label: isLight ? 'text-slate-800 font-semibold' : 'text-slate-200 font-semibold',
-    link: isLight ? 'text-indigo-600 font-medium hover:text-indigo-700' : 'text-indigo-400 font-medium hover:text-indigo-300',
-    statusBg: isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-900 border-slate-800',
+    link: isLight ? 'text-emerald-600 font-medium hover:text-emerald-700' : 'text-emerald-400 font-medium hover:text-emerald-300',
+    statusBg: isLight ? 'bg-slate-50 border-slate-200' : 'bg-[#112019] border-[#23372d]',
   };
 
   if (!isConfigured) {
     return (
       <div className={`rounded-2xl border p-5 ${t.card}`}>
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-800">
+          <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-[#112019] flex items-center justify-center border border-slate-200 dark:border-[#23372d]">
             <Cloud className="w-5 h-5 text-slate-400" />
           </div>
           <div>
@@ -66,8 +74,8 @@ export default function CloudSyncCard({ syncHook, localData }) {
     return (
       <div className={`rounded-2xl border p-5 ${t.card}`}>
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950 flex items-center justify-center border border-indigo-200 dark:border-indigo-800">
-            <Cloud className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center border border-emerald-200 dark:border-emerald-800">
+            <Cloud className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
           </div>
           <div>
             <h3 className={`font-semibold ${t.text}`}>Đồng bộ Đám mây</h3>
@@ -125,14 +133,14 @@ export default function CloudSyncCard({ syncHook, localData }) {
             <p className={`text-xs ${t.sub}`}>{user.email}</p>
           </div>
         </div>
-        <button onClick={signOut} className={`p-2 rounded-lg transition-colors cursor-pointer ${isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-slate-800 text-slate-400'}`}>
+        <button onClick={signOut} className={`p-2 rounded-lg transition-colors cursor-pointer ${isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-[#1a2b23] text-slate-400'}`}>
           <LogOut className="w-4 h-4" />
         </button>
       </div>
 
       <div className={`p-3 rounded-xl mb-4 border flex items-center justify-between ${t.statusBg}`}>
         <div className="flex items-center gap-2">
-          {syncStatus === 'syncing' && <Loader2 className="w-4 h-4 text-indigo-500 animate-spin" />}
+          {syncStatus === 'syncing' && <Loader2 className="w-4 h-4 text-emerald-500 animate-spin" />}
           {syncStatus === 'synced' && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
           {syncStatus === 'error' && <AlertCircle className="w-4 h-4 text-red-500" />}
           {syncStatus === 'idle' && <Cloud className={`w-4 h-4 ${t.sub}`} />}
@@ -158,7 +166,7 @@ export default function CloudSyncCard({ syncHook, localData }) {
           <Save className="w-4 h-4" />
           Tải lên
         </Button>
-        <Button variant="secondary" className="flex-1 justify-center" onClick={pullFromCloud} disabled={syncStatus === 'syncing'}>
+        <Button variant="secondary" className="flex-1 justify-center" onClick={handlePull} disabled={syncStatus === 'syncing'}>
           <Download className="w-4 h-4" />
           Tải về
         </Button>

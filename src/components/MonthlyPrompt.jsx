@@ -34,7 +34,7 @@ export default function MonthlyPrompt({ currentDayIndex, reflections, onSave, on
 
   const inputClass = isLight
     ? 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-emerald-400 focus:ring-emerald-400/20'
-    : 'bg-slate-700/60 border-slate-600/50 text-slate-200 placeholder-slate-500 focus:border-emerald-500/50 focus:ring-emerald-500/15';
+    : 'bg-[#112019]/70 border-[#2c4337] text-slate-200 placeholder-slate-500 focus:border-emerald-500/50 focus:ring-emerald-500/15';
 
   return (
     <Modal open={open} onClose={handleDismiss} title={`🌿 Suy Ngẫm Tháng ${Math.floor(currentDayIndex / 30)}`}>

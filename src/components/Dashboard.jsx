@@ -58,7 +58,7 @@ export default function Dashboard({
 
   const getCellColor = (i) => {
     if (i > dayIndex) {
-      return isLight ? 'bg-slate-200' : 'bg-slate-800/80';
+      return isLight ? 'bg-slate-200' : 'bg-[#1a2b23]';
     }
     if (isDayComplete ? isDayComplete(i) : false) {
       return 'bg-emerald-500';
@@ -66,7 +66,7 @@ export default function Dashboard({
     if (isDayMissed ? isDayMissed(i) : false) {
       return isLight ? 'bg-red-400' : 'bg-red-500/70';
     }
-    return 'bg-indigo-500';
+    return 'bg-emerald-500';
   };
 
   const totalComplete = useMemo(() => {
@@ -94,9 +94,9 @@ export default function Dashboard({
       label: 'Thi Thiên / Châm Ngôn',
       text: dayData?.readings?.psalmsProverbs || '',
       bg: isLight
-        ? 'bg-purple-50/90 border-purple-200 hover:border-purple-300'
-        : 'bg-purple-950/40 border-purple-800/60 hover:border-purple-700/80',
-      labelColor: isLight ? 'text-purple-800' : 'text-purple-300',
+        ? 'bg-emerald-50/90 border-emerald-200 hover:border-emerald-300'
+        : 'bg-emerald-950/40 border-emerald-800/60 hover:border-emerald-700/80',
+      labelColor: isLight ? 'text-emerald-800' : 'text-emerald-300',
     },
     {
       key: 'newTestament', icon: '✝️',
@@ -121,20 +121,20 @@ export default function Dashboard({
   const t = {
     date: isLight ? 'text-slate-600 font-medium' : 'text-slate-400 font-medium',
     day: isLight ? 'text-slate-900 font-extrabold' : 'text-white font-extrabold',
-    name: isLight ? 'text-indigo-600 font-bold' : 'text-indigo-400 font-bold',
-    badge: isLight ? 'bg-indigo-100 text-indigo-800 font-bold' : 'bg-indigo-950 text-indigo-300 border border-indigo-800',
+    name: isLight ? 'text-emerald-600 font-bold' : 'text-emerald-400 font-bold',
+    badge: isLight ? 'bg-emerald-100 text-emerald-800 font-bold' : 'bg-[#112019] text-emerald-300 border border-[#2c4337]',
     cardText: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
-    journalCard: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-slate-950 border-slate-800',
+    journalCard: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-[#0b1410] border-[#23372d]',
     journalHeader: isLight ? 'text-slate-900' : 'text-slate-100',
     journalSub: isLight ? 'text-slate-500' : 'text-slate-400',
     promptLabel: isLight ? 'text-slate-900' : 'text-slate-100',
     promptSub: isLight ? 'text-slate-500' : 'text-slate-400',
     textarea: isLight
-      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900',
+      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200'
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-900/40',
     input: isLight
-      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-indigo-500'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-indigo-500',
+      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500',
   };
 
   return (
@@ -182,23 +182,23 @@ export default function Dashboard({
         <button
           onClick={() => setHeatmapOpen(!heatmapOpen)}
           className={`w-full flex items-center justify-between p-3.5 sm:p-4 transition-colors cursor-pointer ${
-            isLight ? 'hover:bg-slate-50' : 'hover:bg-slate-900/50'
+            isLight ? 'hover:bg-slate-50' : 'hover:bg-[#112019]/50'
           }`}>
           <div className="flex items-center gap-3 min-w-0 flex-1 mr-2">
-            <Calendar className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+            <Calendar className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
             <div className="text-left min-w-0 flex-1">
               <div className="flex items-center justify-between gap-2 mb-1">
                 <span className={`font-bold text-xs sm:text-sm truncate ${t.journalHeader}`}>
                   Hành Trình 365 Ngày
                 </span>
-                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
+                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 whitespace-nowrap">
                   {totalComplete}/365 ({percentComplete}%)
                 </span>
               </div>
               {/* Mini Horizontal Gradient Progress Bar */}
-              <div className={`w-full h-2 rounded-full overflow-hidden ${isLight ? 'bg-slate-100' : 'bg-slate-800'}`}>
+              <div className={`w-full h-2 rounded-full overflow-hidden ${isLight ? 'bg-slate-100' : 'bg-[#1a2b23]'}`}>
                 <div
-                  className="h-full bg-gradient-to-r from-indigo-500 via-indigo-600 to-emerald-500 transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-500 transition-all duration-500"
                   style={{ width: `${Math.max(percentComplete, 2)}%` }}
                 />
               </div>
@@ -211,7 +211,7 @@ export default function Dashboard({
         </button>
 
         {heatmapOpen && (
-          <div className={`border-t p-4 space-y-3 ${isLight ? 'border-slate-200' : 'border-slate-800'}`}>
+          <div className={`border-t p-4 space-y-3 ${isLight ? 'border-slate-200' : 'border-[#23372d]'}`}>
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-x-3 gap-y-3 pt-1">
               {monthsData.map(({ month, days }) => (
                 <div key={month}>
@@ -232,7 +232,7 @@ export default function Dashboard({
             </div>
 
             {/* Legend */}
-            <div className="flex items-center justify-around pt-2 text-[11px] border-t border-slate-200 dark:border-slate-800">
+            <div className="flex items-center justify-around pt-2 text-[11px] border-t border-slate-200 dark:border-[#23372d]">
               <div className="flex items-center gap-1.5">
                 <div className="w-3 h-3 rounded-[2px] bg-emerald-500" />
                 <span className={t.journalSub}>Đã xong</span>
@@ -242,7 +242,7 @@ export default function Dashboard({
                 <span className={t.journalSub}>Bỏ lỡ</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-[2px] bg-indigo-500" />
+                <div className="w-3 h-3 rounded-[2px] bg-emerald-500" />
                 <span className={t.journalSub}>Hôm nay</span>
               </div>
             </div>
@@ -252,13 +252,13 @@ export default function Dashboard({
 
       {/* User's Custom Verse Vault Widget */}
       <div className={`p-4 sm:p-5 rounded-2xl border animate-fade-in-up ${
-        isLight ? 'bg-indigo-50/80 border-indigo-200' : 'bg-indigo-950/40 border-indigo-800/80'
+        isLight ? 'bg-emerald-50/80 border-emerald-200' : 'bg-[#112019]/60 border-[#2c4337]'
       }`}>
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <Star className="w-4 h-4 text-indigo-500 fill-indigo-500" />
+            <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" />
             <span className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
-              isLight ? 'text-indigo-800' : 'text-indigo-300'
+              isLight ? 'text-emerald-800' : 'text-emerald-300'
             }`}>
               Câu Gốc Tôi Lưu {verses.length > 0 ? `(${verses.length})` : ''}
             </span>
@@ -267,7 +267,7 @@ export default function Dashboard({
           <button
             onClick={() => setShowAddVerse(!showAddVerse)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-              isLight ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-indigo-600 text-white hover:bg-indigo-500'
+              isLight ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'bg-emerald-600 text-white hover:bg-emerald-500'
             }`}
           >
             <Plus className="w-4 h-4" />
@@ -278,7 +278,7 @@ export default function Dashboard({
         {/* Inline Add Verse Form */}
         {showAddVerse && (
           <form onSubmit={handleSaveUserVerse} className={`mb-4 p-3.5 rounded-xl border space-y-3 ${
-            isLight ? 'bg-white border-slate-300 shadow-xs' : 'bg-slate-900 border-slate-700'
+            isLight ? 'bg-white border-slate-300 shadow-xs' : 'bg-[#112019] border-[#2c4337]'
           }`}>
             <p className={`text-xs font-bold ${isLight ? 'text-slate-800' : 'text-slate-200'}`}>
               Ghi lại câu Kinh Thánh bạn thích khi đọc hôm nay:
@@ -303,12 +303,12 @@ export default function Dashboard({
               <button
                 type="button"
                 onClick={() => setShowAddVerse(false)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold ${isLight ? 'text-slate-600 hover:bg-slate-100' : 'text-slate-400 hover:bg-slate-800'}`}>
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold ${isLight ? 'text-slate-600 hover:bg-slate-100' : 'text-slate-400 hover:bg-[#1a2b23]'}`}>
                 Hủy
               </button>
               <button
                 type="submit"
-                className="px-4 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500">
+                className="px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500">
                 Lưu vào Kho
               </button>
             </div>
@@ -319,7 +319,7 @@ export default function Dashboard({
         {currentSavedVerse ? (
           <div>
             <p className={`text-xs sm:text-sm font-bold uppercase tracking-wide mb-1 ${
-              isLight ? 'text-indigo-700' : 'text-indigo-400'
+              isLight ? 'text-emerald-700' : 'text-emerald-400'
             }`}>
               {currentSavedVerse.reference}
             </p>
@@ -373,11 +373,11 @@ export default function Dashboard({
           id="journal-toggle"
           onClick={() => setJournalOpen(!journalOpen)}
           className={`w-full flex items-center justify-between p-4 sm:p-5 transition-colors cursor-pointer ${
-            isLight ? 'hover:bg-slate-50' : 'hover:bg-slate-900/50'
+            isLight ? 'hover:bg-slate-50' : 'hover:bg-[#112019]/50'
           }`}>
           <div className="flex items-center gap-3.5">
             <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${
-              isLight ? 'bg-indigo-50 border border-indigo-200' : 'bg-indigo-950/80 border border-indigo-800'
+              isLight ? 'bg-emerald-50 border border-emerald-200' : 'bg-[#112019] border border-[#2c4337]'
             }`}>
               <span className="text-2xl">✍️</span>
             </div>
@@ -393,7 +393,7 @@ export default function Dashboard({
         </button>
 
         {journalOpen && (
-          <div className={`border-t p-4 sm:p-5 space-y-4 ${isLight ? 'border-slate-200' : 'border-slate-800'}`}>
+          <div className={`border-t p-4 sm:p-5 space-y-4 ${isLight ? 'border-slate-200' : 'border-[#23372d]'}`}>
             {JOURNAL_PROMPTS.map(({ key, emoji, label, sub }) => (
               <div key={key}>
                 <label className={`flex items-center gap-2 text-base font-bold mb-2 ${t.promptLabel}`}>

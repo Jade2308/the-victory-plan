@@ -4,7 +4,7 @@ import { Card, Button, EmptyState } from './ui/Primitives.jsx';
 import { useTheme } from '../context/ThemeContext.jsx';
 
 const CARD_STYLES_LIGHT = [
-  'bg-indigo-50/80 border-indigo-200 text-indigo-950',
+  'bg-emerald-50/80 border-emerald-200 text-emerald-950',
   'bg-emerald-50/80 border-emerald-200 text-emerald-950',
   'bg-amber-50/80 border-amber-200 text-amber-950',
   'bg-sky-50/80 border-sky-200 text-sky-950',
@@ -12,8 +12,8 @@ const CARD_STYLES_LIGHT = [
 ];
 
 const CARD_STYLES_DARK = [
-  'bg-indigo-950/40 border-indigo-800/60 text-indigo-100',
-  'bg-emerald-950/40 border-emerald-800/60 text-emerald-100',
+  'bg-[#112019]/70 border-[#2c4337] text-slate-100',
+  'bg-[#112019]/70 border-[#2c4337] text-slate-100',
   'bg-amber-950/40 border-amber-800/60 text-amber-100',
   'bg-sky-950/40 border-sky-800/60 text-sky-100',
   'bg-rose-950/40 border-rose-800/60 text-rose-100',
@@ -40,16 +40,16 @@ export default function VerseVault({ verses, onAdd, onDelete }) {
     h2: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
     sub: isLight ? 'text-slate-600' : 'text-slate-400',
     count: isLight ? 'text-slate-600' : 'text-slate-400',
-    refText: isLight ? 'text-indigo-700 font-bold' : 'text-indigo-400 font-bold',
+    refText: isLight ? 'text-emerald-700 font-bold' : 'text-emerald-400 font-bold',
     verseText: isLight ? 'text-slate-900 font-medium' : 'text-slate-100 font-medium',
     addedAt: isLight ? 'text-slate-500' : 'text-slate-400',
     input: isLight
-      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-indigo-500'
-      : 'bg-slate-900 border-slate-700 text-slate-100 placeholder-slate-500 focus:border-indigo-500',
+      ? 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+      : 'bg-[#112019] border-[#2c4337] text-slate-100 placeholder-slate-500 focus:border-emerald-500',
     label: isLight ? 'text-slate-800 font-semibold' : 'text-slate-200 font-semibold',
-    formCard: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-slate-950 border-slate-800',
+    formCard: isLight ? 'bg-white border-slate-200 shadow-xs' : 'bg-[#0b1410] border-[#23372d]',
     dot: isLight ? 'bg-slate-300' : 'bg-slate-700',
-    dotActive: isLight ? 'bg-indigo-600' : 'bg-indigo-400',
+    dotActive: isLight ? 'bg-emerald-600' : 'bg-emerald-400',
   };
 
   return (
@@ -157,7 +157,7 @@ export default function VerseVault({ verses, onAdd, onDelete }) {
                 onClick={() => setCardIndex(i => Math.max(0, i - 1))}
                 disabled={cardIndex === 0}
                 className={`p-2 rounded-xl transition-colors disabled:opacity-30 ${
-                  isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-slate-800 text-slate-300'
+                  isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-[#1a2b23] text-slate-300'
                 }`}>
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -180,7 +180,7 @@ export default function VerseVault({ verses, onAdd, onDelete }) {
                 onClick={() => setCardIndex(i => Math.min(verses.length - 1, i + 1))}
                 disabled={cardIndex === verses.length - 1}
                 className={`p-2 rounded-xl transition-colors disabled:opacity-30 ${
-                  isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-slate-800 text-slate-300'
+                  isLight ? 'hover:bg-slate-200 text-slate-700' : 'hover:bg-[#1a2b23] text-slate-300'
                 }`}>
                 <ChevronRight className="w-5 h-5" />
               </button>

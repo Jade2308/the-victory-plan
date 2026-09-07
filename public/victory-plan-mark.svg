@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Victory Plan</title>
   <rect width="128" height="128" rx="34" fill="#059669"/>
   <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+    <!-- Cross resting above an open Bible -->
     <path d="M64 29v27M52 42h24"/>
     <path d="M64 61c-7-7-15-10-28-10H29v41h8c13 0 21 4 27 10 6-6 14-10 27-10h8V51h-7c-13 0-21 3-28 10Z"/>
     <path d="M64 61v41"/>
