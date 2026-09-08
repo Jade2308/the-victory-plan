@@ -201,7 +201,7 @@ export default function Layout({
                     onOpenInstallModal?.();
                   }
                 }}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-all cursor-pointer"
                 title="Cài đặt ứng dụng"
               >
                 <Download className="w-3.5 h-3.5" />
@@ -213,31 +213,30 @@ export default function Layout({
             <button
               id="mobile-stats-btn"
               onClick={() => setActiveTab('weekly')}
-              className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer ${
+              className={`flex items-center justify-center w-8 h-8 rounded-full border transition-all cursor-pointer ${
                 activeTab === 'weekly' || activeTab === 'heatmap'
                   ? 'bg-emerald-600 text-white border-emerald-600'
                   : isLight
                     ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
                     : 'bg-[#112019] border-[#2c4337] text-emerald-300'
               }`}
+              title="Tiến độ"
             >
-              <BarChart2 className="w-3.5 h-3.5" />
-              <span>Tiến độ</span>
+              <BarChart2 className="w-4 h-4" />
             </button>
 
             {/* Compact Mobile Theme Switch Button */}
             <button
               id="mobile-theme-toggle"
               onClick={onToggleTheme}
-              title={systemIsDark ? 'Đang tự động giữ Chế độ Tối theo hệ thống điện thoại' : 'Đổi Chế độ Sáng / Tối'}
-              className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer ${
+              title={systemIsDark ? 'Đang giữ Chế độ Tối theo hệ thống' : 'Đổi Chế độ Sáng / Tối'}
+              className={`flex items-center justify-center w-8 h-8 rounded-full border transition-all cursor-pointer ${
                 isLight
                   ? 'bg-slate-100 border-slate-200 text-amber-600'
                   : 'bg-[#112019] border-[#23372d] text-emerald-300'
               }`}
             >
-              {systemIsDark ? <Lock className="w-3.5 h-3.5 text-emerald-400" /> : isLight ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
-              <span>{systemIsDark ? 'Tối (HĐH)' : isLight ? 'Sáng' : 'Tối'}</span>
+              {systemIsDark ? <Lock className="w-4 h-4 text-emerald-400" /> : isLight ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
           </div>
         </header>
