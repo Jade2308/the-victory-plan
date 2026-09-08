@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase.js';
 
 function getAuthRedirectUrl() {
@@ -283,7 +283,7 @@ export function useSupabaseSync() {
     }
   }, []);
 
-  return {
+  return useMemo(() => ({
     isConfigured: isSupabaseConfigured,
     authReady,
     user,
@@ -302,6 +302,7 @@ export function useSupabaseSync() {
     saveVerseToCloud,
     deleteVerseFromCloud,
     saveReflectionToCloud,
-  };
+  }), [authReady, user, syncStatus, lastSynced, errorMessage, fetchUserData, saveSettingsToCloud, saveProgressToCloud, saveJournalToCloud, saveVerseToCloud, deleteVerseFromCloud, saveReflectionToCloud]);
 }
+
 

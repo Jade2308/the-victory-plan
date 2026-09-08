@@ -16,13 +16,29 @@ export function useAppState(user, syncHook) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const journalDebounceTimers = useRef({});
+  const syncHookRef = useRef(syncHook);
+  syncHookRef.current = syncHook;
+
+  const loadedUserIdRef = useRef(null);
 
   // Fetch full user data from Supabase
   const loadData = useCallback(async (showLoading = true) => {
-    if (!user?.id || !syncHook?.fetchUserData) return;
+    const currentSyncHook = syncHookRef.current;
+    if (!user?.id || !currentSyncHook?.fetchUserData) {
+      if (showLoading) setLoadingUserData(false);
+      return;
+    }
+
     if (showLoading) setLoadingUserData(true);
+
+    // Timeout safety fallback (5 seconds max)
+    const safetyTimer = setTimeout(() => {
+      if (showLoading) setLoadingUserData(false);
+      setIsLoaded(true);
+    }, 5000);
+
     try {
-      const data = await syncHook.fetchUserData(user.id);
+      const data = await currentSyncHook.fetchUserData(user.id);
       if (data) {
         if (data.settings) {
           let name = data.settings.userName;
@@ -48,18 +64,23 @@ export function useAppState(user, syncHook) {
     } catch (err) {
       console.error('Lỗi khi tải dữ liệu từ database:', err);
     } finally {
+      clearTimeout(safetyTimer);
       if (showLoading) {
         setLoadingUserData(false);
         setIsLoaded(true);
       }
     }
-  }, [user, syncHook]);
+  }, [user?.id]);
 
   // Initial load when user signs in or out
   useEffect(() => {
     if (user?.id) {
-      loadData(true);
+      if (loadedUserIdRef.current !== user.id) {
+        loadedUserIdRef.current = user.id;
+        loadData(true);
+      }
     } else {
+      loadedUserIdRef.current = null;
       // Clear all user data from memory upon logout
       setSettingsState({ startDate: null, theme: 'dark', userName: '' });
       setProgress({});
@@ -79,6 +100,7 @@ export function useAppState(user, syncHook) {
       } catch {}
     }
   }, [user?.id, loadData]);
+
 
   // Supabase Realtime channel subscription for multi-device sync
   useEffect(() => {
@@ -164,12 +186,13 @@ export function useAppState(user, syncHook) {
   const setSettings = useCallback((updaterOrValue) => {
     setSettingsState(prev => {
       const next = typeof updaterOrValue === 'function' ? updaterOrValue(prev) : updaterOrValue;
-      if (user?.id && syncHook?.saveSettingsToCloud) {
-        syncHook.saveSettingsToCloud(user.id, next);
+      const currentSyncHook = syncHookRef.current;
+      if (user?.id && currentSyncHook?.saveSettingsToCloud) {
+        currentSyncHook.saveSettingsToCloud(user.id, next);
       }
       return next;
     });
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
 
   // Mutator: Mark Reading
   const markReading = useCallback((dayIndex, field, value) => {
@@ -177,27 +200,29 @@ export function useAppState(user, syncHook) {
       const currentDay = prev[dayIndex] || {};
       const updatedDay = { ...currentDay, [field]: value };
       const next = { ...prev, [dayIndex]: updatedDay };
-      if (user?.id && syncHook?.saveProgressToCloud) {
-        syncHook.saveProgressToCloud(user.id, dayIndex, updatedDay);
+      const currentSyncHook = syncHookRef.current;
+      if (user?.id && currentSyncHook?.saveProgressToCloud) {
+        currentSyncHook.saveProgressToCloud(user.id, dayIndex, updatedDay);
       }
       return next;
     });
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
 
   // Mutator: Save Journal (with typing debounce)
   const saveJournal = useCallback((dayIndex, data) => {
     setJournals(prev => ({ ...prev, [dayIndex]: data }));
 
-    if (user?.id && syncHook?.saveJournalToCloud) {
+    const currentSyncHook = syncHookRef.current;
+    if (user?.id && currentSyncHook?.saveJournalToCloud) {
       if (journalDebounceTimers.current[dayIndex]) {
         clearTimeout(journalDebounceTimers.current[dayIndex]);
       }
       journalDebounceTimers.current[dayIndex] = setTimeout(() => {
-        syncHook.saveJournalToCloud(user.id, dayIndex, data);
+        currentSyncHook.saveJournalToCloud(user.id, dayIndex, data);
         delete journalDebounceTimers.current[dayIndex];
       }, 500);
     }
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
 
   // Mutator: Add Verse
   const addVerse = useCallback((verse) => {
@@ -208,27 +233,31 @@ export function useAppState(user, syncHook) {
       addedAt: verse.addedAt || new Date().toISOString(),
     };
     setVerses(prev => [newVerse, ...prev]);
-    if (user?.id && syncHook?.saveVerseToCloud) {
-      syncHook.saveVerseToCloud(user.id, newVerse);
+    const currentSyncHook = syncHookRef.current;
+    if (user?.id && currentSyncHook?.saveVerseToCloud) {
+      currentSyncHook.saveVerseToCloud(user.id, newVerse);
     }
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
 
   // Mutator: Delete Verse
   const deleteVerse = useCallback((id) => {
     setVerses(prev => prev.filter(v => String(v.id) !== String(id)));
-    if (user?.id && syncHook?.deleteVerseFromCloud) {
-      syncHook.deleteVerseFromCloud(user.id, id);
+    const currentSyncHook = syncHookRef.current;
+    if (user?.id && currentSyncHook?.deleteVerseFromCloud) {
+      currentSyncHook.deleteVerseFromCloud(user.id, id);
     }
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
 
   // Mutator: Save Reflection
   const saveReflection = useCallback((monthBlock, text) => {
     const refData = { text, savedAt: new Date().toISOString() };
     setReflections(prev => ({ ...prev, [monthBlock]: refData }));
-    if (user?.id && syncHook?.saveReflectionToCloud) {
-      syncHook.saveReflectionToCloud(user.id, monthBlock, refData);
+    const currentSyncHook = syncHookRef.current;
+    if (user?.id && currentSyncHook?.saveReflectionToCloud) {
+      currentSyncHook.saveReflectionToCloud(user.id, monthBlock, refData);
     }
-  }, [user?.id, syncHook]);
+  }, [user?.id]);
+
 
   // Helper: Current Day Index calculation
   const getCurrentDayIndex = useCallback(() => {
