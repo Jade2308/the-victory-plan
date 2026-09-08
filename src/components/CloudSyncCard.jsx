@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Cloud, Save, Download, LogIn, UserPlus, LogOut, Loader2, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Cloud, RefreshCw, LogIn, UserPlus, LogOut, Loader2, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext.jsx';
 import { Button } from './ui/Primitives.jsx';
 
-export default function CloudSyncCard({ syncHook, localData, onImport }) {
+export default function CloudSyncCard({ syncHook, refreshData }) {
   const theme = useTheme();
   const isLight = theme === 'light';
   
@@ -14,7 +14,7 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
 
   const {
     isConfigured, user, syncStatus, lastSynced, errorMessage,
-    signUp, signIn, signOut, syncToCloud, pullFromCloud
+    signUp, signIn, signInWithGoogle, signOut
   } = syncHook;
 
   const handleAuth = async (e) => {
@@ -34,11 +34,15 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
     }
   };
 
-  const handlePull = async () => {
-    const cloudData = await pullFromCloud();
-    if (cloudData) {
-      onImport?.(cloudData);
-      alert('Đã phục hồi dữ liệu từ đám mây.');
+  const handleRefresh = async () => {
+    if (refreshData) {
+      await refreshData();
+    }
+  };
+
+  const handleSignOut = async () => {
+    if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+      await signOut();
     }
   };
 
@@ -79,8 +83,24 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
           </div>
           <div>
             <h3 className={`font-semibold ${t.text}`}>Đồng bộ Đám mây</h3>
-            <p className={`text-xs ${t.sub}`}>Đăng nhập để sao lưu dữ liệu của bạn</p>
+            <p className={`text-xs ${t.sub}`}>Đăng nhập để tự động đồng bộ dữ liệu của bạn trên mọi thiết bị</p>
           </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={signInWithGoogle}
+          disabled={loading}
+          className="w-full py-2.5 mb-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all disabled:opacity-60 cursor-pointer flex items-center justify-center gap-2 shadow-xs"
+        >
+          <img src="/google-g-logo.svg" alt="" aria-hidden="true" className="w-4 h-4" />
+          Đăng nhập với Google
+        </button>
+
+        <div className="flex items-center gap-3 my-3">
+          <div className="h-px flex-1 bg-slate-200 dark:bg-[#23372d]" />
+          <span className="text-[11px] text-slate-400">hoặc dùng Email</span>
+          <div className="h-px flex-1 bg-slate-200 dark:bg-[#23372d]" />
         </div>
 
         <form onSubmit={handleAuth} className="space-y-3">
@@ -105,9 +125,9 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
             />
           </div>
           
-          <Button type="submit" className="w-full justify-center mt-2" disabled={loading}>
+          <Button type="submit" variant="secondary" className="w-full justify-center mt-2" disabled={loading}>
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : (isLogin ? <LogIn className="w-4 h-4" /> : <UserPlus className="w-4 h-4" />)}
-            {isLogin ? 'Đăng nhập' : 'Đăng ký'}
+            {isLogin ? 'Đăng nhập với Email' : 'Đăng ký'}
           </Button>
           
           <p className="text-center text-xs mt-3">
@@ -129,11 +149,15 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
             <Cloud className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
           </div>
           <div>
-            <h3 className={`font-semibold ${t.text}`}>Đã kết nối</h3>
+            <h3 className={`font-semibold ${t.text}`}>Đã kết nối tài khoản</h3>
             <p className={`text-xs ${t.sub}`}>{user.email}</p>
           </div>
         </div>
-        <button onClick={signOut} className={`p-2 rounded-lg transition-colors cursor-pointer ${isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-[#1a2b23] text-slate-400'}`}>
+        <button
+          onClick={handleSignOut}
+          title="Đăng xuất"
+          className={`p-2 rounded-lg transition-colors cursor-pointer ${isLight ? 'hover:bg-slate-100 text-slate-500' : 'hover:bg-[#1a2b23] text-slate-400'}`}
+        >
           <LogOut className="w-4 h-4" />
         </button>
       </div>
@@ -145,9 +169,9 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
           {syncStatus === 'error' && <AlertCircle className="w-4 h-4 text-red-500" />}
           {syncStatus === 'idle' && <Cloud className={`w-4 h-4 ${t.sub}`} />}
           <span className={`text-xs font-semibold ${t.text}`}>
-            {syncStatus === 'syncing' ? 'Đang đồng bộ...' : 
-             syncStatus === 'synced' ? 'Đã đồng bộ' : 
-             syncStatus === 'error' ? 'Lỗi đồng bộ' : 'Sẵn sàng'}
+            {syncStatus === 'syncing' ? 'Đang lưu lên Database...' : 
+             syncStatus === 'synced' ? 'Đã đồng bộ với Cloud Database' : 
+             syncStatus === 'error' ? 'Lỗi kết nối database' : 'Sẵn sàng'}
           </span>
         </div>
         {lastSynced && (
@@ -158,19 +182,23 @@ export default function CloudSyncCard({ syncHook, localData, onImport }) {
       </div>
 
       {errorMessage && (
-        <p className="text-xs text-red-500 mb-4 px-2 font-medium">{errorMessage}</p>
+        <div className="p-3 mb-4 rounded-xl bg-red-500/10 border border-red-500/20 text-xs text-red-400">
+          <p className="font-semibold mb-1">Chi tiết lỗi:</p>
+          <p>{errorMessage}</p>
+          <p className="mt-1 text-[11px] text-slate-400">Hãy chắc chắn bạn đã chạy file <code>supabase-schema.sql</code> trong Supabase SQL Editor.</p>
+        </div>
       )}
 
-      <div className="flex gap-2">
-        <Button variant="secondary" className="flex-1 justify-center" onClick={syncToCloud} disabled={syncStatus === 'syncing'}>
-          <Save className="w-4 h-4" />
-          Tải lên
-        </Button>
-        <Button variant="secondary" className="flex-1 justify-center" onClick={handlePull} disabled={syncStatus === 'syncing'}>
-          <Download className="w-4 h-4" />
-          Tải về
-        </Button>
-      </div>
+      <Button
+        variant="secondary"
+        className="w-full justify-center"
+        onClick={handleRefresh}
+        disabled={syncStatus === 'syncing'}
+      >
+        <RefreshCw className={`w-4 h-4 ${syncStatus === 'syncing' ? 'animate-spin' : ''}`} />
+        Làm mới dữ liệu từ Database
+      </Button>
     </div>
   );
 }
+

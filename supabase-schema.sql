@@ -40,12 +40,13 @@ CREATE TABLE IF NOT EXISTS public.user_journals (
 
 -- 4. Bảng Câu gốc
 CREATE TABLE IF NOT EXISTS public.user_verses (
-  id TEXT PRIMARY KEY,
+  id TEXT NOT NULL,
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   reference TEXT NOT NULL,
   text TEXT NOT NULL,
   added_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
+  updated_at TIMESTAMPTZ DEFAULT NOW(),
+  PRIMARY KEY (user_id, id)
 );
 
 -- 5. Bảng Suy ngẫm hàng tháng
@@ -69,25 +70,24 @@ ALTER TABLE public.user_verses ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.user_reflections ENABLE ROW LEVEL SECURITY;
 
 -- Policies
-CREATE POLICY "Users manage own settings"
-  ON public.user_settings FOR ALL
-  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users manage own progress"
-  ON public.user_progress FOR ALL
-  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users manage own journals"
-  ON public.user_journals FOR ALL
-  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users manage own verses"
-  ON public.user_verses FOR ALL
-  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users manage own reflections"
-  ON public.user_reflections FOR ALL
-  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE tablename = 'user_settings' AND policyname = 'Users manage own settings') THEN
+    CREATE POLICY "Users manage own settings" ON public.user_settings FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE tablename = 'user_progress' AND policyname = 'Users manage own progress') THEN
+    CREATE POLICY "Users manage own progress" ON public.user_progress FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE tablename = 'user_journals' AND policyname = 'Users manage own journals') THEN
+    CREATE POLICY "Users manage own journals" ON public.user_journals FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE tablename = 'user_verses' AND policyname = 'Users manage own verses') THEN
+    CREATE POLICY "Users manage own verses" ON public.user_verses FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE tablename = 'user_reflections' AND policyname = 'Users manage own reflections') THEN
+    CREATE POLICY "Users manage own reflections" ON public.user_reflections FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  END IF;
+END $$;
 
 -- ============================================================
 -- Indexes để tăng hiệu năng truy vấn
@@ -97,3 +97,32 @@ CREATE INDEX IF NOT EXISTS idx_user_progress_user_id ON public.user_progress(use
 CREATE INDEX IF NOT EXISTS idx_user_journals_user_id ON public.user_journals(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_verses_user_id ON public.user_verses(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_reflections_user_id ON public.user_reflections(user_id);
+
+-- ============================================================
+-- Kích hoạt Supabase Realtime để đồng bộ tức thì giữa các thiết bị
+-- ============================================================
+
+DO $$
+BEGIN
+  BEGIN
+    ALTER PUBLICATION supabase_realtime ADD TABLE public.user_settings;
+  EXCEPTION WHEN duplicate_object THEN NULL;
+  END;
+  BEGIN
+    ALTER PUBLICATION supabase_realtime ADD TABLE public.user_progress;
+  EXCEPTION WHEN duplicate_object THEN NULL;
+  END;
+  BEGIN
+    ALTER PUBLICATION supabase_realtime ADD TABLE public.user_journals;
+  EXCEPTION WHEN duplicate_object THEN NULL;
+  END;
+  BEGIN
+    ALTER PUBLICATION supabase_realtime ADD TABLE public.user_verses;
+  EXCEPTION WHEN duplicate_object THEN NULL;
+  END;
+  BEGIN
+    ALTER PUBLICATION supabase_realtime ADD TABLE public.user_reflections;
+  EXCEPTION WHEN duplicate_object THEN NULL;
+  END;
+END $$;
+

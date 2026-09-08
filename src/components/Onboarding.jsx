@@ -78,7 +78,7 @@ export default function Onboarding({ onComplete }) {
             isLight ? 'bg-emerald-50 border border-emerald-200 text-emerald-800' : 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-300'
           }`}>
             <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-emerald-500" />
-            <span>Dữ liệu lưu trực tiếp trên thiết bị của bạn — không cần internet, bảo mật tuyệt đối.</span>
+            <span>Dữ liệu được lưu trữ an toàn trên tài khoản của bạn — tự động đồng bộ tức thì giữa điện thoại và máy tính.</span>
           </div>
 
           <button

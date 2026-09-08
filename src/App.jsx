@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Loader2 } from 'lucide-react';
 import { ThemeContext } from './context/ThemeContext.jsx';
 import { useAppState } from './hooks/useAppState.js';
 import { useSchedule } from './hooks/useSchedule.js';
@@ -17,6 +18,7 @@ import { useSupabaseSync } from './hooks/useSupabaseSync.js';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
+  const syncHook = useSupabaseSync();
 
   const {
     settings, setSettings,
@@ -24,6 +26,7 @@ export default function App() {
     journals,
     verses,
     reflections,
+    loadingUserData,
     markReading,
     saveJournal,
     addVerse,
@@ -34,11 +37,16 @@ export default function App() {
     isDayMissed,
     getTotalCompleted,
     importAllData,
-  } = useAppState();
+    refreshData,
+  } = useAppState(syncHook.user, syncHook);
 
-  const localData = { settings, progress, journals, verses, reflections };
-  const syncHook = useSupabaseSync(localData);
-  const [guestMode, setGuestMode] = useState(() => localStorage.getItem('ct_entry_choice') === 'guest');
+  const [guestMode, setGuestMode] = useState(() => {
+    try {
+      return localStorage.getItem('ct_entry_choice') === 'guest';
+    } catch {
+      return false;
+    }
+  });
 
   useEffect(() => {
     const pendingName = sessionStorage.getItem('ct_pending_user_name')?.trim();
@@ -48,7 +56,7 @@ export default function App() {
     sessionStorage.removeItem('ct_pending_user_name');
   }, [syncHook.user, setSettings]);
 
-  const { schedule, loading, getDayData } = useSchedule();
+  const { schedule, loading: scheduleLoading, getDayData } = useSchedule();
 
   const theme = settings.theme || 'dark';
   const currentDayIndex = getCurrentDayIndex();
@@ -60,21 +68,38 @@ export default function App() {
   };
 
   if (!syncHook.authReady) {
-    return <div className="min-h-screen flex items-center justify-center bg-[#0b1410] text-slate-400 text-sm">Đang chuẩn bị...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#0b1410] text-slate-400 text-sm">
+        <Loader2 className="w-5 h-5 text-emerald-500 animate-spin mr-2" />
+        Đang chuẩn bị...
+      </div>
+    );
   }
 
   if (!syncHook.user && !guestMode) {
     return (
       <ThemeContext.Provider value={theme}>
         <WelcomeScreen syncHook={syncHook} onContinueAsGuest={() => {
-          localStorage.setItem('ct_entry_choice', 'guest');
+          try {
+            localStorage.setItem('ct_entry_choice', 'guest');
+          } catch {}
           setGuestMode(true);
         }} />
       </ThemeContext.Provider>
     );
   }
 
-  // Show onboarding if no startDate set
+  // Loading user data from database when user is authenticated
+  if (syncHook.user && loadingUserData) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#0b1410] text-slate-300 gap-3">
+        <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
+        <p className="text-sm font-medium">Đang tải dữ liệu từ đám mây...</p>
+      </div>
+    );
+  }
+
+  // Show onboarding if no startDate set in database / state
   if (!settings.startDate) {
     return (
       <ThemeContext.Provider value={theme}>
@@ -83,7 +108,7 @@ export default function App() {
     );
   }
 
-  if (loading) {
+  if (scheduleLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#0b1410]">
         <div className="text-slate-400 text-sm">Đang tải kế hoạch...</div>
@@ -174,6 +199,7 @@ export default function App() {
             localData={{ settings, progress, journals, verses, reflections }}
             onNavigateTab={setActiveTab}
             syncHook={syncHook}
+            refreshData={refreshData}
           />
         );
       default:
@@ -203,3 +229,4 @@ export default function App() {
     </ThemeContext.Provider>
   );
 }
+

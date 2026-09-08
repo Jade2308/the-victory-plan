@@ -7,7 +7,7 @@ import {
   User, Calendar, Bell, Download, Upload, Moon, Sun, Monitor, Trash2, Check, Cloud, Save, BarChart2
 } from 'lucide-react';
 
-export default function SettingsPage({ settings, onUpdate, totalCompleted, currentDayIndex, theme, onImport, localData, onNavigateTab, syncHook }) {
+export default function SettingsPage({ settings, onUpdate, totalCompleted, currentDayIndex, theme, onImport, localData, onNavigateTab, syncHook, refreshData }) {
   const isLight = theme === 'light';
   const { schedule, saveSchedule, permission, requestPermission, sendTestNotification } = useNotifications();
   
@@ -49,12 +49,18 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
     e.target.value = '';
   };
 
-  const handleReset = () => {
-    if (confirm('BẠN CÓ CHẮC CHẮN MUỐN XÓA TẤT CẢ DỮ LIỆU?\nHành động này không thể hoàn tác!')) {
-      localStorage.clear();
+  const handleReset = async () => {
+    if (confirm('BẠN CÓ CHẮC CHẮN MUỐN ĐĂNG XUẤT VÀ XÓA DỮ LIỆU TẠM TRÊN THIẾT BỊ NÀY?')) {
+      if (syncHook?.signOut) {
+        await syncHook.signOut();
+      }
+      try {
+        localStorage.clear();
+      } catch {}
       window.location.reload();
     }
   };
+
 
   const t = {
     h2: isLight ? 'text-slate-900 font-bold' : 'text-slate-100 font-bold',
@@ -133,7 +139,7 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
             <Cloud className="w-4 h-4 text-emerald-500" /> Đồng bộ Đám mây
           </h3>
-          <CloudSyncCard syncHook={syncHook} localData={localData} onImport={onImport} />
+          <CloudSyncCard syncHook={syncHook} refreshData={refreshData} />
         </div>
 
         {/* Notifications */}
