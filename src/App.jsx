@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Info } from 'lucide-react';
 import { ThemeContext } from './context/ThemeContext.jsx';
 import { useAppState } from './hooks/useAppState.js';
 import { useSchedule } from './hooks/useSchedule.js';
@@ -48,6 +48,34 @@ export default function App() {
     }
   });
 
+  const [systemIsDark, setSystemIsDark] = useState(() => {
+    try {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    if (!window.matchMedia) return;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => setSystemIsDark(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (msg) => {
+    setToastMessage(msg);
+  };
+
+  useEffect(() => {
+    if (!toastMessage) return;
+    const timer = setTimeout(() => setToastMessage(null), 4000);
+    return () => clearTimeout(timer);
+  }, [toastMessage]);
+
   useEffect(() => {
     const pendingName = sessionStorage.getItem('ct_pending_user_name')?.trim();
     if (!pendingName || !syncHook.user) return;
@@ -58,7 +86,8 @@ export default function App() {
 
   const { schedule, loading: scheduleLoading, getDayData } = useSchedule();
 
-  const theme = settings.theme || 'dark';
+  // Force dark mode if device OS is in Dark Mode
+  const theme = systemIsDark ? 'dark' : (settings.theme || 'dark');
   const isLight = theme === 'light';
 
   useEffect(() => {
@@ -73,7 +102,6 @@ export default function App() {
       if (metaThemeColor) metaThemeColor.content = '#0b1410';
     } else {
       root.classList.remove('dark');
-      // 'only light' tells Chromium & Samsung Internet Auto-Dark Mode to NOT invert or force-darken the page
       root.style.colorScheme = 'only light';
       if (metaColorScheme) metaColorScheme.content = 'only light';
       if (metaThemeColor) metaThemeColor.content = '#f8fafc';
@@ -85,6 +113,10 @@ export default function App() {
   const totalCompleted = getTotalCompleted();
 
   const handleToggleTheme = () => {
+    if (systemIsDark) {
+      showToast('Điện thoại của bạn đang bật Chế độ Tối hệ thống. Ứng dụng tự động giữ Chế độ Tối để hiển thị tốt nhất trên thiết bị.');
+      return;
+    }
     setSettings(prev => ({ ...prev, theme: prev.theme === 'dark' ? 'light' : 'dark' }));
   };
 
@@ -232,6 +264,18 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
+      {toastMessage && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 max-w-sm w-[90%] px-4 py-3 rounded-2xl bg-emerald-950/95 text-emerald-100 border border-emerald-700/80 shadow-2xl backdrop-blur-md flex items-start gap-3 animate-fade-in-up">
+          <Info className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+          <div className="flex-1 text-xs leading-relaxed font-medium">
+            {toastMessage}
+          </div>
+          <button onClick={() => setToastMessage(null)} className="text-emerald-400 hover:text-white p-0.5 text-xs font-bold">
+            ✕
+          </button>
+        </div>
+      )}
+
       <Layout
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -239,6 +283,7 @@ export default function App() {
         totalCompleted={totalCompleted}
         settings={settings}
         onToggleTheme={handleToggleTheme}
+        systemIsDark={systemIsDark}
       >
         {renderContent()}
       </Layout>

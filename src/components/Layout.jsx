@@ -1,6 +1,6 @@
 import {
   Home, BookOpen, Star, MessageSquare, BarChart2, Calendar, Settings,
-  Sun, Moon, BookMarked
+  Sun, Moon, BookMarked, Lock
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext.jsx';
 import { BRAND_NAME, BRAND_TAGLINE } from '../lib/branding.js';
@@ -25,7 +25,7 @@ const MOBILE_NAV_ITEMS = [
 
 export default function Layout({
   children, activeTab, setActiveTab,
-  currentDayIndex, totalCompleted, settings, onToggleTheme
+  currentDayIndex, totalCompleted, settings, onToggleTheme, systemIsDark
 }) {
   const theme = useTheme();
   const isLight = theme === 'light';
@@ -186,14 +186,15 @@ export default function Layout({
             <button
               id="mobile-theme-toggle"
               onClick={onToggleTheme}
+              title={systemIsDark ? 'Đang tự động giữ Chế độ Tối theo hệ thống điện thoại' : 'Đổi Chế độ Sáng / Tối'}
               className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer ${
                 isLight
                   ? 'bg-slate-100 border-slate-200 text-amber-600'
                   : 'bg-[#112019] border-[#23372d] text-emerald-300'
               }`}
             >
-              {isLight ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
-              <span>{isLight ? 'Sáng' : 'Tối'}</span>
+              {systemIsDark ? <Lock className="w-3.5 h-3.5 text-emerald-400" /> : isLight ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
+              <span>{systemIsDark ? 'Tối (HĐH)' : isLight ? 'Sáng' : 'Tối'}</span>
             </button>
           </div>
         </header>
