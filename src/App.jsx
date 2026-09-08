@@ -59,6 +59,19 @@ export default function App() {
   const { schedule, loading: scheduleLoading, getDayData } = useSchedule();
 
   const theme = settings.theme || 'dark';
+  const isLight = theme === 'light';
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+      root.style.colorScheme = 'dark';
+    } else {
+      root.classList.remove('dark');
+      root.style.colorScheme = 'light';
+    }
+  }, [theme]);
+
   const currentDayIndex = getCurrentDayIndex();
   const currentDayData = getDayData(currentDayIndex);
   const totalCompleted = getTotalCompleted();
@@ -67,9 +80,11 @@ export default function App() {
     setSettings(prev => ({ ...prev, theme: prev.theme === 'dark' ? 'light' : 'dark' }));
   };
 
+  const loadingBg = isLight ? 'bg-slate-50 text-slate-700' : 'bg-[#0b1410] text-slate-300';
+
   if (!syncHook.authReady) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0b1410] text-slate-400 text-sm">
+      <div className={`min-h-screen flex items-center justify-center ${loadingBg} text-sm`}>
         <Loader2 className="w-5 h-5 text-emerald-500 animate-spin mr-2" />
         Đang chuẩn bị...
       </div>
@@ -92,7 +107,7 @@ export default function App() {
   // Loading user data from database when user is authenticated
   if (syncHook.user && loadingUserData) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#0b1410] text-slate-300 gap-3">
+      <div className={`min-h-screen flex flex-col items-center justify-center ${loadingBg} gap-3`}>
         <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
         <p className="text-sm font-medium">Đang tải dữ liệu từ đám mây...</p>
       </div>
@@ -110,8 +125,8 @@ export default function App() {
 
   if (scheduleLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0b1410]">
-        <div className="text-slate-400 text-sm">Đang tải kế hoạch...</div>
+      <div className={`min-h-screen flex items-center justify-center ${loadingBg}`}>
+        <div className="text-sm">Đang tải kế hoạch...</div>
       </div>
     );
   }
