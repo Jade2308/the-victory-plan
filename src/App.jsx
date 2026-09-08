@@ -63,12 +63,20 @@ export default function App() {
 
   useEffect(() => {
     const root = document.documentElement;
+    const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
     if (theme === 'dark') {
       root.classList.add('dark');
       root.style.colorScheme = 'dark';
+      if (metaColorScheme) metaColorScheme.content = 'dark';
+      if (metaThemeColor) metaThemeColor.content = '#0b1410';
     } else {
       root.classList.remove('dark');
-      root.style.colorScheme = 'light';
+      // 'only light' tells Chromium & Samsung Internet Auto-Dark Mode to NOT invert or force-darken the page
+      root.style.colorScheme = 'only light';
+      if (metaColorScheme) metaColorScheme.content = 'only light';
+      if (metaThemeColor) metaThemeColor.content = '#f8fafc';
     }
   }, [theme]);
 
