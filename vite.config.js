@@ -9,7 +9,15 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: [
+        'favicon.ico',
+        'favicon.svg',
+        'apple-touch-icon.png',
+        'pwa-192x192.png',
+        'pwa-512x512.png',
+        'pwa-maskable-512x512.png',
+        'victory-plan-mark.svg'
+      ],
       manifest: {
         name: 'Chiến Thắng - Kế Hoạch Đọc Kinh Thánh',
         short_name: 'Chiến Thắng',
@@ -21,10 +29,32 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
-          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-maskable-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any'
+          }
         ]
+      },
+      devOptions: {
+        enabled: true
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],

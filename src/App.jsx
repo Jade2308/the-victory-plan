@@ -14,11 +14,15 @@ import SettingsPage from './components/SettingsPage.jsx';
 import MonthlyPrompt from './components/MonthlyPrompt.jsx';
 import Onboarding from './components/Onboarding.jsx';
 import WelcomeScreen from './components/WelcomeScreen.jsx';
+import InstallGuideModal from './components/InstallGuideModal.jsx';
 import { useSupabaseSync } from './hooks/useSupabaseSync.js';
+import { usePWAInstall } from './hooks/usePWAInstall.js';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const syncHook = useSupabaseSync();
+  const pwa = usePWAInstall();
+  const [showInstallModal, setShowInstallModal] = useState(false);
 
   const {
     settings, setSettings,
@@ -255,6 +259,8 @@ export default function App() {
             onNavigateTab={setActiveTab}
             syncHook={syncHook}
             refreshData={refreshData}
+            pwa={pwa}
+            onOpenInstallModal={() => setShowInstallModal(true)}
           />
         );
       default:
@@ -284,9 +290,19 @@ export default function App() {
         settings={settings}
         onToggleTheme={handleToggleTheme}
         systemIsDark={systemIsDark}
+        pwa={pwa}
+        onOpenInstallModal={() => setShowInstallModal(true)}
       >
         {renderContent()}
       </Layout>
+
+      <InstallGuideModal
+        isOpen={showInstallModal}
+        onClose={() => setShowInstallModal(false)}
+        isIOS={pwa.isIOS}
+        canPromptDirectly={pwa.canPromptDirectly}
+        onPromptInstall={pwa.promptInstall}
+      />
 
       <MonthlyPrompt
         currentDayIndex={currentDayIndex}

@@ -1,6 +1,6 @@
 import {
   Home, BookOpen, Star, MessageSquare, BarChart2, Calendar, Settings,
-  Sun, Moon, BookMarked, Lock
+  Sun, Moon, BookMarked, Lock, Download
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext.jsx';
 import { BRAND_NAME, BRAND_TAGLINE } from '../lib/branding.js';
@@ -25,7 +25,8 @@ const MOBILE_NAV_ITEMS = [
 
 export default function Layout({
   children, activeTab, setActiveTab,
-  currentDayIndex, totalCompleted, settings, onToggleTheme, systemIsDark
+  currentDayIndex, totalCompleted, settings, onToggleTheme, systemIsDark,
+  pwa, onOpenInstallModal
 }) {
   const theme = useTheme();
   const isLight = theme === 'light';
@@ -113,6 +114,29 @@ export default function Layout({
           })}
         </nav>
 
+        {/* Install PWA App Button */}
+        {!pwa?.isInstalled && (
+          <div className="px-4 pt-3">
+            <button
+              onClick={() => {
+                if (pwa?.canPromptDirectly) {
+                  pwa.promptInstall();
+                } else {
+                  onOpenInstallModal?.();
+                }
+              }}
+              className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-all cursor-pointer group"
+              title="Cài đặt Victory Plan vào máy tính"
+            >
+              <span className="flex items-center gap-2">
+                <Download className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+                <span>Cài đặt ứng dụng</span>
+              </span>
+              <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded-md">App</span>
+            </button>
+          </div>
+        )}
+
         {/* Theme toggle switch */}
         <div className="px-4 pb-5 pt-3 border-t border-slate-200 dark:border-[#23372d]">
           <button
@@ -166,6 +190,25 @@ export default function Layout({
           </div>
 
           <div className="flex items-center gap-2">
+            {/* Install App Button for Mobile */}
+            {!pwa?.isInstalled && (
+              <button
+                id="mobile-install-btn"
+                onClick={() => {
+                  if (pwa?.canPromptDirectly) {
+                    pwa.promptInstall();
+                  } else {
+                    onOpenInstallModal?.();
+                  }
+                }}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-all cursor-pointer"
+                title="Cài đặt ứng dụng"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Cài app</span>
+              </button>
+            )}
+
             {/* Quick Stats Button for Mobile */}
             <button
               id="mobile-stats-btn"

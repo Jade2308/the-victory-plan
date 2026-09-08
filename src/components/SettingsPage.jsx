@@ -4,10 +4,15 @@ import { useNotifications } from '../hooks/useNotifications.js';
 import { Card, Button, Badge } from './ui/Primitives.jsx';
 import CloudSyncCard from './CloudSyncCard.jsx';
 import {
-  User, Calendar, Bell, Download, Upload, Moon, Sun, Monitor, Trash2, Check, Cloud, Save, BarChart2
+  User, Calendar, Bell, Download, Upload, Monitor, Trash2, Check, Cloud, Save, BarChart2,
+  Smartphone
 } from 'lucide-react';
 
-export default function SettingsPage({ settings, onUpdate, totalCompleted, currentDayIndex, theme, onImport, localData, onNavigateTab, syncHook, refreshData }) {
+export default function SettingsPage({
+  settings, onUpdate, totalCompleted, currentDayIndex, theme,
+  onImport, localData, onNavigateTab, syncHook, refreshData,
+  pwa, onOpenInstallModal
+}) {
   const isLight = theme === 'light';
   const { schedule, saveSchedule, permission, requestPermission, sendTestNotification } = useNotifications();
   
@@ -193,6 +198,49 @@ export default function SettingsPage({ settings, onUpdate, totalCompleted, curre
                 </Button>
               </div>
             )}
+          </Card>
+        </div>
+
+        {/* App Installation / PWA */}
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.18s' }}>
+          <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
+            <Smartphone className="w-4 h-4 text-emerald-500" /> Cài đặt ứng dụng (App)
+          </h3>
+          <Card className={`p-4 space-y-3 ${t.card}`}>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className={`text-sm font-semibold ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>
+                  Trạng thái ứng dụng
+                </p>
+                <p className={`text-xs ${t.sub}`}>
+                  {pwa?.isInstalled ? 'Đang chạy dưới dạng app độc lập' : 'Đang mở trên trình duyệt web'}
+                </p>
+              </div>
+              <Badge variant={pwa?.isInstalled ? 'success' : 'neutral'}>
+                {pwa?.isInstalled ? 'Đã cài đặt' : 'Chưa cài đặt'}
+              </Badge>
+            </div>
+
+            <p className={`text-xs leading-relaxed ${t.sub}`}>
+              Cài đặt Chiến Thắng vào thiết bị giúp bạn mở nhanh từ màn hình chính, sử dụng toàn màn hình không có thanh URL, và lưu dữ liệu để đọc offline khi không có internet.
+            </p>
+
+            <div className="pt-1">
+              <Button
+                variant={pwa?.isInstalled ? 'secondary' : 'primary'}
+                className="w-full justify-center"
+                onClick={() => {
+                  if (pwa?.canPromptDirectly) {
+                    pwa.promptInstall();
+                  } else {
+                    onOpenInstallModal?.();
+                  }
+                }}
+              >
+                <Download className="w-4 h-4" />
+                {pwa?.isInstalled ? 'Xem thông tin & Hướng dẫn' : 'Cài đặt ứng dụng vào thiết bị'}
+              </Button>
+            </div>
           </Card>
         </div>
 
