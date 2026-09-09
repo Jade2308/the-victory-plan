@@ -1,11 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext.jsx';
 import { useNotifications } from '../hooks/useNotifications.js';
 import { Card, Button, Badge } from './ui/Primitives.jsx';
 import CloudSyncCard from './CloudSyncCard.jsx';
 import {
-  User, Calendar, Bell, Download, Upload, Monitor, Trash2, Check, Cloud, Save, BarChart2,
-  Smartphone
+  User, Calendar, Bell, Check, Cloud, Save, BarChart2,
+  Smartphone, LogOut, Download
 } from 'lucide-react';
 
 export default function SettingsPage({
@@ -18,7 +18,6 @@ export default function SettingsPage({
   
   const [name, setName] = useState(settings.userName || '');
   const [savedName, setSavedName] = useState(false);
-  const fileInputRef = useRef(null);
 
   const handleNameSave = () => {
     onUpdate({ ...settings, userName: name });
@@ -26,36 +25,8 @@ export default function SettingsPage({
     setTimeout(() => setSavedName(false), 2000);
   };
 
-  const handleExport = () => {
-    const data = JSON.stringify(localData, null, 2);
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `chien-thang-backup-${new Date().toISOString().split('T')[0]}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleImport = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const data = JSON.parse(ev.target.result);
-        onImport(data);
-        alert('Phục hồi dữ liệu thành công!');
-      } catch (err) {
-        alert('File không hợp lệ hoặc bị lỗi.');
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = '';
-  };
-
-  const handleReset = async () => {
-    if (confirm('BẠN CÓ CHẮC CHẮN MUỐN ĐĂNG XUẤT VÀ XÓA DỮ LIỆU TẠM TRÊN THIẾT BỊ NÀY?')) {
+  const handleSignOut = async () => {
+    if (confirm('Bạn có chắc chắn muốn đăng xuất tài khoản?')) {
       if (syncHook?.signOut) {
         await syncHook.signOut();
       }
@@ -244,24 +215,41 @@ export default function SettingsPage({
           </Card>
         </div>
 
-        {/* Local Data Management */}
+        {/* Account / Logout */}
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h3 className={`text-sm mb-3 flex items-center gap-2 ${t.sectionTitle}`}>
-            <Monitor className="w-4 h-4 text-emerald-500" /> Dữ liệu cục bộ
+            <User className="w-4 h-4 text-emerald-500" /> Tài khoản & Đăng xuất
           </h3>
-          <Card className={`p-4 space-y-3 ${t.card}`}>
-            <Button variant="secondary" className="w-full justify-start" onClick={handleExport}>
-              <Download className="w-4 h-4" /> Sao lưu dữ liệu (Tải file JSON)
-            </Button>
-            
-            <input type="file" ref={fileInputRef} onChange={handleImport} accept=".json" className="hidden" />
-            <Button variant="secondary" className="w-full justify-start" onClick={() => fileInputRef.current?.click()}>
-              <Upload className="w-4 h-4" /> Phục hồi dữ liệu (Từ file JSON)
-            </Button>
+          <Card className={`p-4 space-y-4 ${t.card}`}>
+            {syncHook?.user ? (
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className={`text-xs ${t.sub}`}>Tài khoản đang đăng nhập</p>
+                  <p className={`text-sm font-semibold ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>
+                    {syncHook.user.email}
+                  </p>
+                </div>
+                <Badge variant="success">Đã kết nối</Badge>
+              </div>
+            ) : (
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className={`text-xs ${t.sub}`}>Trạng thái tài khoản</p>
+                  <p className={`text-sm font-medium ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                    Chưa đăng nhập tài khoản
+                  </p>
+                </div>
+                <Badge variant="neutral">Chưa kết nối</Badge>
+              </div>
+            )}
 
-            <div className={`pt-3 border-t mt-3 ${t.divider}`}>
-              <Button variant="danger" className="w-full justify-start" onClick={handleReset}>
-                <Trash2 className="w-4 h-4" /> Xóa toàn bộ dữ liệu
+            <div className={`pt-3 border-t ${t.divider}`}>
+              <Button
+                variant="danger"
+                className="w-full justify-center"
+                onClick={handleSignOut}
+              >
+                <LogOut className="w-4 h-4" /> Đăng xuất tài khoản
               </Button>
             </div>
           </Card>

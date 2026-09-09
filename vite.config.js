@@ -19,8 +19,8 @@ export default defineConfig({
         'victory-plan-mark.svg'
       ],
       manifest: {
-        name: 'Victory Plan - Kế Hoạch Đọc Kinh Thánh',
-        short_name: 'Victory Plan',
+        name: 'Chiến Thắng - Kế Hoạch Đọc Kinh Thánh',
+        short_name: 'Chiến Thắng',
         description: 'Victory Bible Reading Plan - 365 ngày đồng hành cùng Lời Chúa',
         theme_color: '#112019',
         background_color: '#0b1410',
